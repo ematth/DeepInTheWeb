@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex proposal"] 1727979208.75826 "proposal.aux" "proposal.bbl" "proposal" 1727979209.45685 0
-  "./bibliography.bib" 1727979208.51442 402 04f2b38090492a4e54cfff5faa779e05 ""
+["bibtex proposal"] 1727979208.75826 "proposal.aux" "proposal.bbl" "proposal" 1727992156.14334 0
+  "./bibliography.bib" 1727979214.44583 402 04f2b38090492a4e54cfff5faa779e05 ""
   "/opt/local/share/texmf-texlive/bibtex/bst/base/plain.bst" 1556755946 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "proposal.aux" 1727979209.37523 570 21707a45f83046bb01c9cb678f6930d9 "pdflatex"
+  "proposal.aux" 1727992156.05938 570 21707a45f83046bb01c9cb678f6930d9 "pdflatex"
   (generated)
   "proposal.bbl"
   "proposal.blg"
   (rewritten before read)
-["pdflatex"] 1727979208.79154 "/Users/ematth/Documents/CS-412/CS-412-Proj/proposal/proposal.tex" "proposal.pdf" "proposal" 1727979209.45709 0
-  "/Users/ematth/Documents/CS-412/CS-412-Proj/proposal/proposal.tex" 1727979026.11634 2140 3998fbb17010b863e7215c3b1f49a2a5 ""
+["pdflatex"] 1727992155.42915 "/Users/ematth/Documents/CS-412/CS-412-Proj/proposal/proposal.tex" "proposal.pdf" "proposal" 1727992156.14374 0
+  "/Users/ematth/Documents/CS-412/CS-412-Proj/proposal/proposal.tex" 1727992155.15909 2053 9f496d6b7e47d2a478d0955b43a81bc7 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -17,12 +17,10 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr17.tfm" 1136768653 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
-  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti12.tfm" 1136768653 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
-  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1248133631 36118 fad905eba93cff5bce1e185fe980a177 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/base/exscale.sty" 1705352648 2581 8e0df574a0fdf7d67e300be743ad323e ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/base/inputenc.sty" 1705352648 5048 425739d70251273bf93e3d51f3c40048 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/base/size12.clo" 1705352648 8449 f07039d8e4e89f21078d9b5137579bfc ""
@@ -34,9 +32,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1713709439.39188 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1713709407 8221420 39a9a86bbfa123cd48355616e9de8144 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "proposal.aux" 1727979209.37523 570 21707a45f83046bb01c9cb678f6930d9 "pdflatex"
+  "proposal.aux" 1727992156.05938 570 21707a45f83046bb01c9cb678f6930d9 "pdflatex"
   "proposal.bbl" 1727979208.78047 287 1e106336bd247658d2b203a3d45519dd "bibtex proposal"
-  "proposal.tex" 1727979026.11634 2140 3998fbb17010b863e7215c3b1f49a2a5 ""
+  "proposal.tex" 1727992155.15909 2053 9f496d6b7e47d2a478d0955b43a81bc7 ""
   (generated)
   "proposal.aux"
   "proposal.log"

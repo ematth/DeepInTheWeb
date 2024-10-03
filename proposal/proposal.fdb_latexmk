@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex proposal"] 1727979095.09033 "proposal.aux" "proposal.bbl" "proposal" 1727979095.88258 0
-  "./bibliography.bib" 1727979093.07775 328 d793cd3e24cceeb802fb024ca85f4c0e ""
+["bibtex proposal"] 1727979208.75826 "proposal.aux" "proposal.bbl" "proposal" 1727979209.45685 0
+  "./bibliography.bib" 1727979208.51442 402 04f2b38090492a4e54cfff5faa779e05 ""
   "/opt/local/share/texmf-texlive/bibtex/bst/base/plain.bst" 1556755946 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "proposal.aux" 1727979095.74586 570 21707a45f83046bb01c9cb678f6930d9 "pdflatex"
+  "proposal.aux" 1727979209.37523 570 21707a45f83046bb01c9cb678f6930d9 "pdflatex"
   (generated)
   "proposal.bbl"
   "proposal.blg"
   (rewritten before read)
-["pdflatex"] 1727979095.11613 "/Users/ematth/Documents/CS-412/CS-412-Proj/proposal/proposal.tex" "proposal.pdf" "proposal" 1727979095.88282 0
+["pdflatex"] 1727979208.79154 "/Users/ematth/Documents/CS-412/CS-412-Proj/proposal/proposal.tex" "proposal.pdf" "proposal" 1727979209.45709 0
   "/Users/ematth/Documents/CS-412/CS-412-Proj/proposal/proposal.tex" 1727979026.11634 2140 3998fbb17010b863e7215c3b1f49a2a5 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -34,8 +34,8 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1713709439.39188 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1713709407 8221420 39a9a86bbfa123cd48355616e9de8144 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "proposal.aux" 1727979095.74586 570 21707a45f83046bb01c9cb678f6930d9 "pdflatex"
-  "proposal.bbl" 1727979095.11391 224 b27c2a0b8ef39c5cd1b93a4ae0fa514d "bibtex proposal"
+  "proposal.aux" 1727979209.37523 570 21707a45f83046bb01c9cb678f6930d9 "pdflatex"
+  "proposal.bbl" 1727979208.78047 287 1e106336bd247658d2b203a3d45519dd "bibtex proposal"
   "proposal.tex" 1727979026.11634 2140 3998fbb17010b863e7215c3b1f49a2a5 ""
   (generated)
   "proposal.aux"

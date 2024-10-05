@@ -1,6 +1,6 @@
 \documentclass[12pt]{extarticle}
 \usepackage[utf8]{inputenc}
-\usepackage{cite, authblk}
+\usepackage{cite, authblk, mdframed}
 
 \title{UIUC CS 412 Project Proposal}
 \author[1]{Evan Matthews}
@@ -15,27 +15,45 @@
 
 \section{Introduction}
 
-The problem: We want to understand how we can use predictors such as physical activity, sleep, and duration of internet usage to determine the level of problematic internet usage among young populations.
+\begin{mdframed}
+\textbf{AI-generated abstract, for review!}
 
-Q: What is problematic internet use? 
+This proposal outlines a project aimed at predicting early signs of Problematic Internet Use (PIU) in children and teens using machine learning techniques. 
+The motivation stems from the increasing concern over the negative impacts of excessive internet use on mental health, as highlighted by various studies. 
+The project will leverage data from the Child Mind Institute's Health Brain Network, which includes a comprehensive set of features related to children's physical activity. 
+The project plan consists of three phases: data preprocessing, initial model evaluation, and fine-feature reevaluation, with the goal of submitting the findings to a Kaggle competition and potentially publishing the results.
+\end{mdframed}
+
 
 \section{Motivation}
 
-Problematic Internet Use (PIU), also known as Internet Addiction or Internet Use Disorder, refers to excessive or poorly controlled internet use that leads to negative consequences in a person's life. 
-It can affect social, academic, occupational, and psychological functioning.\cite{child-mind-institute-problematic-internet-use}
+As the internet and online-based technology has become more perhasive in the past two decades, medical professionals have rigorously questioned the impact of excessive internet use.
+This issue has become especially worrisome as numerous studies of children, teens and young adults have shown that excessive internet use can lead to a variety of negative outcomes \cite{Pettorruso2020-qt,Cash2012-rb,Aboujaoude2010-mc,Restrepo2020-pb}.
+In particular, small-sample studies have shown correlations between excessive internet use and mental health issues such as depression, anxiety, and heightened impulsivity \cite{Cash2012-rb}.
+Disorders such as ADHD, Autism Spectrum Disorder, and General Anxiety Disorder have also shown noticeable appearance among small samples\cite{Restrepo2020-pb}. 
+The rise in these correlations has led to the definition and further study of Problematic Internet Use (PIU), which is similarly identified as Internet Addiction Disorder (IAD) and Compulsive/Pathological Internet Use \cite{Restrepo2020-pb}.
 
-In the context of the Healthy Brain Network (HBN) study and the competition you mentioned, PIU would be assessed by looking at behaviors such as:
-
-Excessive time spent online: Spending more time than intended or needed on internet-related activities.
-Neglect of other responsibilities: Ignoring social, academic, or personal obligations in favor of internet use.
-Social isolation: Reduced real-life interactions, leading to loneliness or social issues.
-Emotional or mental health impact: Internet use becoming a coping mechanism for emotional distress, leading to anxiety, depression, or other mental health issues.
-Inability to reduce use: Even when recognizing the negative impact, the individual may find it difficult to limit their time online.
-The Severity Impairment Index (SII) in this case would likely quantify the degree to which internet use negatively affects the participants' lives, helping researchers better understand the link between internet behaviors and mental health outcomes.
+Despite having multiple studies showing the negative effects of excessive internet use, exact details relating to early signs of PIU and the most at-risk age groups are still unknown.
+First, most studies have been conducted on early development groups like children, teens, and young adults \cite{Pettorruso2020-qt,Cash2012-rb,Aboujaoude2010-mc,Restrepo2020-pb}, but a more specific age group could help in preventing and treating PIU early.
+Second, studies of this nature focus primarily on written or binary feedback from students or parents. 
+These studies can be useful, but they also introduce biases and often fail to show the factors which correlate a participant's estimated internet impact \cite{Restrepo2020-pb,Aboujaoude2010-mc}.
+This project intends to rectify these issues by using a machine-learning approach to predict early signs of PIU using a wider range of variables on children and teens.
 
 \section{Data}
 
+Our project background and necessary training data originates from the Child Mind Institute (CMI) and the ground-breaking Health Brain Network (HBN) study.
+CMI has provided these items as part of an ongoing Kaggle competition for PIU prediction given features from children's physical activity. 
+This dataset consists of 81 unique features, including categorical and scoring integers, scoring floating points, and categorical string labels \cite{child-mind-institute-problematic-internet-use}.
+Given the competition and CS 412 project deadlines, we are committed to a full submission of our project to the Kaggle competition and further publication should intriguing results arise.
+
 \section{Plan}
+
+Our project development timeline consists of three main phases: data preprocessing, initial model evaluation, and fine-feature reevaluation.
+In the data preprocessing phase, we will clean up the dataset, cast all features to consistent, comparable types, and determine how much of the dataset can be used in supervised and semi-supervised tasks.
+In the intial model evaluation phase, we will train on all available clean features and submit to Kaggle for initial review. 
+We will also use this phase to perform multi-dimensional comparisons of all features to determine which features are most important for an optimal prediction.
+Finally, in the fine-feature reevaluation phase, we will retrain our model on a finer set of features as an optimal submission to the Kaggle competition.
+As previously mentioned, further publication will be considered if results outperform competition expectations.
 
 \bibliographystyle{plain}
 \bibliography{bibliography}

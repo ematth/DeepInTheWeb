@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex proposal"] 1728177587 "proposal.aux" "proposal.bbl" "proposal" 1728177587
+["bibtex proposal"] 1728181234 "proposal.aux" "proposal.bbl" "proposal" 1728181261
   "/usr/local/texlive/2021/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "bibliography.bib" 1728177153 10271 845222aa2bf32f4cf5901b554ae7016a ""
-  "proposal.aux" 1728177587 1045 98e606a0abe86384cbf5d1d5d586f24a "pdflatex"
+  "proposal.aux" 1728181261 893 c8194050d54c4d78b2d0e0673ccb52ef "pdflatex"
   (generated)
   "proposal.blg"
   "proposal.bbl"
-["pdflatex"] 1728177587 "/Users/vikram/Documents/School/CS412/CS-412-Proj/proposal/proposal.tex" "/Users/vikram/Documents/School/CS412/CS-412-Proj/proposal/proposal.pdf" "proposal" 1728177587
-  "/Users/vikram/Documents/School/CS412/CS-412-Proj/proposal/proposal.aux" 1728177587 1045 98e606a0abe86384cbf5d1d5d586f24a ""
-  "/Users/vikram/Documents/School/CS412/CS-412-Proj/proposal/proposal.tex" 1728177586 5793 587e3e62fd517bff7a4c901a5abc2b15 ""
+["pdflatex"] 1728181260 "/Users/vikram/Documents/School/CS412/CS-412-Proj/proposal/proposal.tex" "/Users/vikram/Documents/School/CS412/CS-412-Proj/proposal/proposal.pdf" "proposal" 1728181261
+  "/Users/vikram/Documents/School/CS412/CS-412-Proj/proposal/proposal.aux" 1728181261 893 c8194050d54c4d78b2d0e0673ccb52ef ""
+  "/Users/vikram/Documents/School/CS412/CS-412-Proj/proposal/proposal.tex" 1728181260 6843 b456e8b16ded1f7b1674b8fa502da714 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -18,11 +18,13 @@
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr17.tfm" 1136768653 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti12.tfm" 1136768653 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm" 1136768653 772 9a936b7f5e2ff0557fce0f62822f0bbf ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1248133631 36118 fad905eba93cff5bce1e185fe980a177 ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb" 1248133631 24252 1e4e051947e12dfb50fee0b7f4e26e3a ""
   "/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2021/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/local/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty" 1576625273 7734 b98cbb34c81f667027c1e3ebdbfce34b ""
@@ -60,12 +62,12 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1637348320 2724735 0dd8424c0f2197bda6bbdbd63e4e6d7d ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "proposal.aux" 1728177587 1045 98e606a0abe86384cbf5d1d5d586f24a "pdflatex"
-  "proposal.bbl" 1728177587 1422 69b0960833f8c3a04c64c01836d9c7ff "bibtex proposal"
-  "proposal.tex" 1728177586 5793 587e3e62fd517bff7a4c901a5abc2b15 ""
+  "proposal.aux" 1728181261 893 c8194050d54c4d78b2d0e0673ccb52ef "pdflatex"
+  "proposal.bbl" 1728181234 1422 69b0960833f8c3a04c64c01836d9c7ff "bibtex proposal"
+  "proposal.tex" 1728181260 6843 b456e8b16ded1f7b1674b8fa502da714 ""
   (generated)
   "/Users/vikram/Documents/School/CS412/CS-412-Proj/proposal/proposal.log"
-  "proposal.log"
-  "proposal.pdf"
   "/Users/vikram/Documents/School/CS412/CS-412-Proj/proposal/proposal.pdf"
+  "proposal.pdf"
   "proposal.aux"
+  "proposal.log"

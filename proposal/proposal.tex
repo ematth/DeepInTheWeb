@@ -1,19 +1,24 @@
 \documentclass[12pt]{extarticle}
 \usepackage[utf8]{inputenc}
 \usepackage{cite, authblk, mdframed}
+\usepackage[margin=1in]{geometry}
 
-\title{UIUC CS 412 Project Proposal}
+\title{Project Proposal}
 \author[1]{Evan Matthews}
 \author[1]{Vikram Ramavarapu}
 \author[1]{Krishnaveni Unnikrishnan}
-\affil[1]{Siebel School of Computing and Data Science}
+\affil[1]{CS 412 Group 6}
 \date{October 7th, 2024}
+
+
 
 \begin{document}
 
 \maketitle
 
-\section{Introduction}
+\pagebreak
+
+% \section{Introduction}
 
 % \begin{mdframed}
 % \textbf{AI-generated abstract, for review!}
@@ -25,13 +30,14 @@
 % \end{mdframed}
 
 The internet has become an integral part of our daily lives, with people of all ages spending a significant amount of time online. This gives rise to concerns about the potential negative impacts of excessive internet use, particularly on children and teens.
-Problematic Internet Use (PIU) is a condition characterized by excessive or poorly controlled preoccupations, urges, or behaviors regarding computer use and internet access that lead to impairment or distress \cite{Pettorruso2020-qt}. PIU has been associated with a range of mental health issues, including depression, anxiety, and impulsivity \cite{Cash2012-rb}.
+Problematic Internet Use (PIU) is a condition characterized by excessive or poorly controlled preoccupations, urges, or behaviors regarding computer use and internet access that lead to impairment or distress \cite{Pettorruso2020-qt}. 
+PIU has been associated with a range of mental health issues, including depression, anxiety, and impulsivity \cite{Cash2012-rb}.
 Identifying early signs of PIU in children and teens is crucial for prevention and intervention.
 In this project, we aim to predict early signs of PIU in children and teens using machine learning techniques, leveraging data from the Child Mind Institute's Healthy Brain Network.
 The project plan consists of three phases: data preprocessing, initial model evaluation, and fine-feature reevaluation.
 This project is a submission to the Child Mind Institute's Kaggle competition on PIU prediction, and we aim to further publish our results if they outperform competition expectations.
 
-\section{Motivation}
+% \section{Motivation}
 
 % As the internet and online-based technology has become more perhasive in the past two decades, medical professionals have rigorously questioned the impact of excessive internet use.
 % This issue has become especially worrisome as numerous studies of children, teens and young adults have shown that excessive internet use can lead to a variety of negative outcomes \cite{Pettorruso2020-qt,Cash2012-rb,Aboujaoude2010-mc,Restrepo2020-pb}.
@@ -49,7 +55,7 @@ A major drawback of assessing PIU is in its subjective nature. Problematic inter
 The use of quantitative measures such as the SII allow for the application of data mining methods to aid in the classification of PIU severity. Moreover, other measurable attributes such as sleep quality and duration, physical activity level, and duration of internet usage can all be used to understand correlations with PIU.
 This project intends to rectify these issues by using a machine-learning approach to predict early signs of PIU using a wider range of variables on children and teens.
 
-\section{Data}
+% \section{Data}
 
 Our project background and necessary training data originates from the Child Mind Institute (CMI) and the ground-breaking Health Brain Network (HBN) study.
 CMI has provided these items as part of an ongoing Kaggle competition for PIU prediction given features from children's physical activity. 
@@ -57,7 +63,7 @@ This dataset consists of 81 unique features, including categorical and scoring i
 Data is in timeseries format, per participant, and includes information on physical activity, sleep quality, and duration, and internet usage duration.
 Given the competition and CS 412 project deadlines, we are committed to a full submission of our project to the Kaggle competition and further publication should intriguing results arise.
 
-\section{Plan}
+% \section{Plan}
 
 Our project development timeline consists of three main phases: data preprocessing, initial model evaluation, and fine-feature reevaluation.
 In the data preprocessing phase, we will clean up the dataset, cast all features to consistent, comparable types, and determine how much of the dataset can be used in supervised and semi-supervised tasks. Certain values of fields such as 1 for the \texttt{no-wear} field or \texttt{low} for the battery level field for the heartrate monitor may be excluded from the dataset to avoid skewing the results.

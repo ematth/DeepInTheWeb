@@ -1,216 +1,216 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.21)  7 OCT 2024 16:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.15)  7 OCT 2024 21:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/ematth/Documents/CS-412/CS-412-Proj/proposal/proposal.tex
-(/Users/ematth/Documents/CS-412/CS-412-Proj/proposal/proposal.tex
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-02-20>
-(/usr/local/texlive/2024/texmf-dist/tex/latex/extsizes/extarticle.cls
+**c:/Users/Ematt/OneDrive/Documents/CS-412/CS-412-Proj/proposal/proposal.tex
+(c:/Users/Ematt/OneDrive/Documents/CS-412/CS-412-Proj/proposal/proposal.tex
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-08-16>
+(C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/extsizes\extarticle.cls
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/size11.clo
-File: size11.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/base/exscale.sty
+(C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
+File: size11.clo 2024/02/08 v1.4n Standard LaTeX file (size option)
+) (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/base\exscale.sty
 Package: exscale 2018/09/24 v2.1i Standard LaTeX package exscale
 LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
-\big@size=\dimen140
+\big@size=\dimen141
 )
-\c@part=\count188
-\c@section=\count189
-\c@subsection=\count190
-\c@subsubsection=\count191
-\c@paragraph=\count192
-\c@subparagraph=\count193
-\c@figure=\count194
-\c@table=\count195
-\abovecaptionskip=\skip48
-\belowcaptionskip=\skip49
-\bibindent=\dimen141
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2021/02/14 v1.3d Input encoding file
+\c@part=\count194
+\c@section=\count195
+\c@subsection=\count196
+\c@subsubsection=\count197
+\c@paragraph=\count198
+\c@subparagraph=\count199
+\c@figure=\count266
+\c@table=\count267
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen142
+) (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/cite/cite.sty
+) (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/cite\cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/preprint/authblk.sty
+) (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/preprint\authblk.sty
 Package: authblk 2001/02/27 1.3 (PWD)
-\affilsep=\skip50
-\@affilsep=\skip51
-\c@Maxaffil=\count196
-\c@authors=\count197
-\c@affil=\count198
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/mdframed/mdframed.sty
+\affilsep=\skip51
+\@affilsep=\skip52
+\c@Maxaffil=\count268
+\c@authors=\count269
+\c@affil=\count270
+) (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/mdframed\mdframed.sty
 Package: mdframed 2013/07/01 1.9b: mdframed
- (/usr/local/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+ (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+ (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks19
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+) (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+) (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)) (/usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2024-02-20 L3 programming layer (loader) 
- (/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count199
-\l__pdf_internal_box=\box51
+)) (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2024-08-16 L3 programming layer (loader) 
+ (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count271
+\l__pdf_internal_box=\box52
 ))
-Package: xparse 2024-02-18 L3 Experimental document command parser
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: xparse 2024-08-16 L3 Experimental document command parser
+) (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count266
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/zref/zref-abspage.sty
+\etb@tempcnta=\count272
+) (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-abspage.sty
 Package: zref-abspage 2023-09-14 v2.35 Module abspage for zref (HO)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/zref/zref-base.sty
+ (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-base.sty
 Package: zref-base 2023-09-14 v2.35 Module base for zref (HO)
- (/usr/local/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+ (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+) (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+) (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
+ (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+) (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/auxhook/auxhook.sty
+) (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 Package zref Info: New property list: main on input line 767.
 Package zref Info: New property: default on input line 768.
 Package zref Info: New property: page on input line 769.
 )
-\c@abspage=\count267
+\c@abspage=\count273
 Package zref Info: New property: abspage on input line 67.
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/needspace/needspace.sty
+) (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/needspace\needspace.sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
+) (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+Package: color 2024/01/14 v1.3d Standard LaTeX Color (DPC)
+ (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-\mdf@templength=\skip52
-\c@mdf@globalstyle@cnt=\count268
-\mdf@skipabove@length=\skip53
-\mdf@skipbelow@length=\skip54
-\mdf@leftmargin@length=\skip55
-\mdf@rightmargin@length=\skip56
-\mdf@innerleftmargin@length=\skip57
-\mdf@innerrightmargin@length=\skip58
-\mdf@innertopmargin@length=\skip59
-\mdf@innerbottommargin@length=\skip60
-\mdf@splittopskip@length=\skip61
-\mdf@splitbottomskip@length=\skip62
-\mdf@outermargin@length=\skip63
-\mdf@innermargin@length=\skip64
-\mdf@linewidth@length=\skip65
-\mdf@innerlinewidth@length=\skip66
-\mdf@middlelinewidth@length=\skip67
-\mdf@outerlinewidth@length=\skip68
-\mdf@roundcorner@length=\skip69
-\mdf@footenotedistance@length=\skip70
-\mdf@userdefinedwidth@length=\skip71
-\mdf@needspace@length=\skip72
-\mdf@frametitleaboveskip@length=\skip73
-\mdf@frametitlebelowskip@length=\skip74
-\mdf@frametitlerulewidth@length=\skip75
-\mdf@frametitleleftmargin@length=\skip76
-\mdf@frametitlerightmargin@length=\skip77
-\mdf@shadowsize@length=\skip78
-\mdf@extratopheight@length=\skip79
-\mdf@subtitleabovelinewidth@length=\skip80
-\mdf@subtitlebelowlinewidth@length=\skip81
-\mdf@subtitleaboveskip@length=\skip82
-\mdf@subtitlebelowskip@length=\skip83
-\mdf@subtitleinneraboveskip@length=\skip84
-\mdf@subtitleinnerbelowskip@length=\skip85
-\mdf@subsubtitleabovelinewidth@length=\skip86
-\mdf@subsubtitlebelowlinewidth@length=\skip87
-\mdf@subsubtitleaboveskip@length=\skip88
-\mdf@subsubtitlebelowskip@length=\skip89
-\mdf@subsubtitleinneraboveskip@length=\skip90
-\mdf@subsubtitleinnerbelowskip@length=\skip91
- (/usr/local/texlive/2024/texmf-dist/tex/latex/mdframed/md-frame-0.mdf
+ (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+) (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx))
+\mdf@templength=\skip53
+\c@mdf@globalstyle@cnt=\count274
+\mdf@skipabove@length=\skip54
+\mdf@skipbelow@length=\skip55
+\mdf@leftmargin@length=\skip56
+\mdf@rightmargin@length=\skip57
+\mdf@innerleftmargin@length=\skip58
+\mdf@innerrightmargin@length=\skip59
+\mdf@innertopmargin@length=\skip60
+\mdf@innerbottommargin@length=\skip61
+\mdf@splittopskip@length=\skip62
+\mdf@splitbottomskip@length=\skip63
+\mdf@outermargin@length=\skip64
+\mdf@innermargin@length=\skip65
+\mdf@linewidth@length=\skip66
+\mdf@innerlinewidth@length=\skip67
+\mdf@middlelinewidth@length=\skip68
+\mdf@outerlinewidth@length=\skip69
+\mdf@roundcorner@length=\skip70
+\mdf@footenotedistance@length=\skip71
+\mdf@userdefinedwidth@length=\skip72
+\mdf@needspace@length=\skip73
+\mdf@frametitleaboveskip@length=\skip74
+\mdf@frametitlebelowskip@length=\skip75
+\mdf@frametitlerulewidth@length=\skip76
+\mdf@frametitleleftmargin@length=\skip77
+\mdf@frametitlerightmargin@length=\skip78
+\mdf@shadowsize@length=\skip79
+\mdf@extratopheight@length=\skip80
+\mdf@subtitleabovelinewidth@length=\skip81
+\mdf@subtitlebelowlinewidth@length=\skip82
+\mdf@subtitleaboveskip@length=\skip83
+\mdf@subtitlebelowskip@length=\skip84
+\mdf@subtitleinneraboveskip@length=\skip85
+\mdf@subtitleinnerbelowskip@length=\skip86
+\mdf@subsubtitleabovelinewidth@length=\skip87
+\mdf@subsubtitlebelowlinewidth@length=\skip88
+\mdf@subsubtitleaboveskip@length=\skip89
+\mdf@subsubtitlebelowskip@length=\skip90
+\mdf@subsubtitleinneraboveskip@length=\skip91
+\mdf@subsubtitleinnerbelowskip@length=\skip92
+ (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/mdframed\md-frame-0.mdf
 File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 )
-\mdf@frametitlebox=\box52
-\mdf@footnotebox=\box53
-\mdf@splitbox@one=\box54
-\mdf@splitbox@two=\box55
-\mdf@splitbox@save=\box56
-\mdfsplitboxwidth=\skip92
-\mdfsplitboxtotalwidth=\skip93
-\mdfsplitboxheight=\skip94
-\mdfsplitboxdepth=\skip95
-\mdfsplitboxtotalheight=\skip96
-\mdfframetitleboxwidth=\skip97
-\mdfframetitleboxtotalwidth=\skip98
-\mdfframetitleboxheight=\skip99
-\mdfframetitleboxdepth=\skip100
-\mdfframetitleboxtotalheight=\skip101
-\mdffootnoteboxwidth=\skip102
-\mdffootnoteboxtotalwidth=\skip103
-\mdffootnoteboxheight=\skip104
-\mdffootnoteboxdepth=\skip105
-\mdffootnoteboxtotalheight=\skip106
-\mdftotallinewidth=\skip107
-\mdfboundingboxwidth=\skip108
-\mdfboundingboxtotalwidth=\skip109
-\mdfboundingboxheight=\skip110
-\mdfboundingboxdepth=\skip111
-\mdfboundingboxtotalheight=\skip112
-\mdf@freevspace@length=\skip113
-\mdf@horizontalwidthofbox@length=\skip114
-\mdf@verticalmarginwhole@length=\skip115
-\mdf@horizontalspaceofbox=\skip116
-\mdfsubtitleheight=\skip117
-\mdfsubsubtitleheight=\skip118
-\c@mdfcountframes=\count269
+\mdf@frametitlebox=\box53
+\mdf@footnotebox=\box54
+\mdf@splitbox@one=\box55
+\mdf@splitbox@two=\box56
+\mdf@splitbox@save=\box57
+\mdfsplitboxwidth=\skip93
+\mdfsplitboxtotalwidth=\skip94
+\mdfsplitboxheight=\skip95
+\mdfsplitboxdepth=\skip96
+\mdfsplitboxtotalheight=\skip97
+\mdfframetitleboxwidth=\skip98
+\mdfframetitleboxtotalwidth=\skip99
+\mdfframetitleboxheight=\skip100
+\mdfframetitleboxdepth=\skip101
+\mdfframetitleboxtotalheight=\skip102
+\mdffootnoteboxwidth=\skip103
+\mdffootnoteboxtotalwidth=\skip104
+\mdffootnoteboxheight=\skip105
+\mdffootnoteboxdepth=\skip106
+\mdffootnoteboxtotalheight=\skip107
+\mdftotallinewidth=\skip108
+\mdfboundingboxwidth=\skip109
+\mdfboundingboxtotalwidth=\skip110
+\mdfboundingboxheight=\skip111
+\mdfboundingboxdepth=\skip112
+\mdfboundingboxtotalheight=\skip113
+\mdf@freevspace@length=\skip114
+\mdf@horizontalwidthofbox@length=\skip115
+\mdf@verticalmarginwhole@length=\skip116
+\mdf@horizontalspaceofbox=\skip117
+\mdfsubtitleheight=\skip118
+\mdfsubsubtitleheight=\skip119
+\c@mdfcountframes=\count275
 
 ****** mdframed patching \endmdf@trivlist
 
 ****** -- success******
 
-\mdf@envdepth=\count270
-\c@mdf@env@i=\count271
-\c@mdf@env@ii=\count272
-\c@mdf@zref@counter=\count273
+\mdf@envdepth=\count276
+\c@mdf@env@i=\count277
+\c@mdf@env@ii=\count278
+\c@mdf@zref@counter=\count279
 Package zref Info: New property: mdf@pagevalue on input line 895.
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+) (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+ (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count274
-\Gm@cntv=\count275
-\c@Gm@tempcnt=\count276
-\Gm@bindingoffset=\dimen142
-\Gm@wd@mp=\dimen143
-\Gm@odd@mp=\dimen144
-\Gm@even@mp=\dimen145
-\Gm@layoutwidth=\dimen146
-\Gm@layoutheight=\dimen147
-\Gm@layouthoffset=\dimen148
-\Gm@layoutvoffset=\dimen149
+\Gm@cnth=\count280
+\Gm@cntv=\count281
+\c@Gm@tempcnt=\count282
+\Gm@bindingoffset=\dimen143
+\Gm@wd@mp=\dimen144
+\Gm@odd@mp=\dimen145
+\Gm@even@mp=\dimen146
+\Gm@layoutwidth=\dimen147
+\Gm@layoutheight=\dimen148
+\Gm@layouthoffset=\dimen149
+\Gm@layoutvoffset=\dimen150
 \Gm@dimlist=\toks20
-) (./proposal.aux)
+ (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (proposal.aux)
 \openout1 = `proposal.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
@@ -227,18 +227,18 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
- (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (C:\Users\Ematt\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count277
-\scratchdimen=\dimen150
-\scratchbox=\box57
-\nofMPsegments=\count278
-\nofMParguments=\count279
+\scratchcounter=\count283
+\scratchdimen=\dimen151
+\scratchbox=\box58
+\nofMPsegments=\count284
+\nofMParguments=\count285
 \everyMPshowfont=\toks21
-\MPscratchCnt=\count280
-\MPscratchDim=\dimen151
-\MPnumerator=\count281
-\makeMPintoPDFobject=\count282
+\MPscratchCnt=\count286
+\MPscratchDim=\dimen152
+\MPnumerator=\count287
+\makeMPintoPDFobject=\count288
 \everyMPtoPDFconversion=\toks22
 )
 *geometry* driver: auto-detecting
@@ -277,27 +277,32 @@ LaTeX Font Info:    ... okay on input line 15.
 
 LaTeX Font Info:    External font `cmex7' loaded for size
 (Font)              <6> on input line 17.
+
+
 [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./proposal.bbl [2]) [3] (./proposal.aux)
+{C:/Users/Ematt/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (proposal.bbl
+
+[2])
+
+[3] (proposal.aux)
  ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-02-20>
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-08-16>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3601 strings out of 474116
- 64730 string characters out of 5743682
- 1936187 words of memory out of 5000000
- 25917 multiletter control sequences out of 15000+600000
+ 3607 strings out of 473899
+ 66058 string characters out of 5726500
+ 1936960 words of memory out of 5000000
+ 26433 multiletter control sequences out of 15000+600000
  563197 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,5n,93p,535b,255s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on proposal.pdf (3 pages, 96529 bytes).
+ 84i,5n,93p,545b,255s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Ematt/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Ematt/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Ematt/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ematt/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Ematt/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Ematt/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Ematt/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on proposal.pdf (3 pages, 101601 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 29 compressed objects within 1 object stream
+ 47 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

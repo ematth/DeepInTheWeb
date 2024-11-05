@@ -10,8 +10,8 @@ Strength:
 + Great plan on data preprocessing
 
 Weaknesses:
-- From the Kaggle competition website, it said "The majority of measures are missing for most participants. In particular, the target sii is missing for a portion of the participants in the training set." How are you going to resolve this issue?
-- Unclear validation plan -- how will you evaluate your model beyond submitting to Kaggle directly for the review? Note that this has to be done to assess performance before such a submission. 
+RESOLVED - From the Kaggle competition website, it said "The majority of measures are missing for most participants. In particular, the target sii is missing for a portion of the participants in the training set." How are you going to resolve this issue?
+RESOLVED - Unclear validation plan -- how will you evaluate your model beyond submitting to Kaggle directly for the review? Note that this has to be done to assess performance before such a submission. 
 
 
 3) Datasets and Validation Plan

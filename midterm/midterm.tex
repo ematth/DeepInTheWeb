@@ -82,8 +82,15 @@ We will submit our work to the Child Mind Institute's (CMI) Kaggle competition o
 % Please include a clear evaluation plan, including train-val-test splits, cross-validation, hyper-parameter tuning, and explain clearly how you will do these. 
 % You have to highlight alignment of the project with the course clearly, especially if you have received feedback on concerns regarding limited alignment with the course. 
 
-Data for this project has two components: cross-sectional, and time-series. The cross-sectional data is per participant and contains fields described in the following table (etcetc).
-Each time-series dataset is per participant and each entry of the dataset represents the status of the participant's heartrate monitor at a given point in time.
+Data for this project has two components: cross-sectional, and time-series. The cross-sectional data is per participant and contains fields described in the following table.
+Each time-series dataset is per participant and each entry of the dataset represents the status of the participant's heartrate monitor at a given point in time. PCIAT is the Parent-Child Internet Addiction Test score, which is used to compute the Severity of Internet Addiction Index (SII) score. The SII score is the target variable for this project. For the description of fields in the time-series dataset, see Table \ref{table:fields}.
+
+The project will be divided into three phases: data preprocessing, initial model evaluation, and fine-feature reevaluation.
+The data preprocessing phase entails dropping survey-based fields used to compute PCIAT, which is then used to compute the SII, as our model's intention is to compute SII directly from the other metrics.
+Missing values in the data are filled using iterative imputation, and the missing SII values are filled in using K-Nearest Neighbors (k=5).
+
+Multiple models will be evaluated on the cross-sectional data: Random Forest, XGBoost, SVM, and a feed forward neural network. After this, a sequential model, evaluated amongst transformers or auto-encoders, will be trained on the time-series data. The sequential model will allow us to compute an embedding of the time-series data, which will be used as an additional feature in the cross-sectional model.
+The final model will be an ensemble of the cross-sectional and sequential models, with the sequential model's embedding as an additional feature in the cross-sectional model. The classifier model will be retrained on the concatenated dataset, to predict the SII.
 
 The project will be divided into three phases: data preprocessing, initial model evaluation, and fine-feature reevaluation.
 The data preprocessing phase entails dropping fields where survey responses are recorded and are then used to compute the SII, as our model's intention is to compute SII directly from the other metrics.
@@ -107,11 +114,9 @@ The final model will be an ensemble of the cross-sectional and sequential models
 \end{mdframed}
 
 \section{Plan of Work} 
-\todo what are the next steps before the final report. Please be as precise as possible. Note that you will have about a month to finish the project, so make suitably calibrated plans, e.g., do not over/under promise.
+% \todo what are the next steps before the final report. Please be as precise as possible. Note that you will have about a month to finish the project, so make suitably calibrated plans, e.g., do not over/under promise.
 
-\begin{mdframed}
-    Add plan of work here
-\end{mdframed}
+The next steps entail training and evaluating different sequential models, amongst transformers and auto-encoders on the time-series data. The best model will be selected based on performance metrics, and the model will be used to compute an embedding of the time-series data. The embedding will be used as an additional set of features in the cross-sectional model. The final model will be an ensemble of the cross-sectional and sequential models, with the sequential model's embedding as an additional feature in the cross-sectional model. The classifier model will be retrained on the concatenated dataset, to predict the SII.
 
 \section{Conclusions, discussions}
 
@@ -124,6 +129,7 @@ The final model will be an ensemble of the cross-sectional and sequential models
 \bibliographystyle{plain}
 \bibliography{bibliography}
 
+<<<<<<< HEAD
 \pagebreak
 
 \section*{Appendix A: Feature Importance, Feed-Forward Neural Network}
@@ -448,5 +454,33 @@ test.select("id").with_columns(
 ).write_csv("submission.csv")
 \end{lstlisting}
 \end{mdframed}
+=======
+\section{Appendix}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    step & Step count \\
+    X & X-axis acceleration of the heartrate monitor \\
+    Y & Y-axis acceleration of the heartrate monitor \\
+    Z & Z-axis acceleration of the heartrate monitor \\
+    enmo & Euclidean Norm Minus One (ENMO) \\
+    anglez & Angle in the Z-axis \\
+    non-wear\_flag & Non-wear flag \\
+    light & Light exposure \\
+    battery\_voltage & Battery voltage of the monitor \\
+    time\_of\_day & Time of day \\
+    weekday & Day of the week \\
+    quarter & Quarter of the year \\
+    relative\_date\_PCIAT & Current PCIAT minus previous day PCIAT \\
+    \hline
+    \end{tabular}
+    \caption{Description of fields in the time-series dataset}
+    \label{table:fields}
+    \end{table}
+>>>>>>> 0eddf085c326873899068d3a4de26681a01b6824
 
 \end{document}

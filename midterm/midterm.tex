@@ -98,6 +98,8 @@ The final model will be an ensemble of the cross-sectional and sequential models
 \section{(Current / Preliminary) Results} 
 \todo what you have so far in terms of initial results and analysis of initial results. Please see comment on figures/tables above, especially the fact that good captions go a long way to making things readable.
 
+\todo Cite this! \cite{antonina_dolgorukova_2024}
+
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.8]{"./images/model_accuracy.jpg"}
@@ -135,9 +137,36 @@ The next steps entail training and evaluating different sequential models, among
     \caption{Features plotted in order of importance, ascending.}
 \end{figure}
 
+\section*{Appendix B: Description of Fields in Time-Series Dataset}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Field} & \textbf{Description} \\
+    \hline
+    step & Step count \\
+    X & X-axis acceleration of the heartrate monitor \\
+    Y & Y-axis acceleration of the heartrate monitor \\
+    Z & Z-axis acceleration of the heartrate monitor \\
+    enmo & Euclidean Norm Minus One (ENMO) \\
+    anglez & Angle in the Z-axis \\
+    non-wear\_flag & Non-wear flag \\
+    light & Light exposure \\
+    battery\_voltage & Battery voltage of the monitor \\
+    time\_of\_day & Time of day \\
+    weekday & Day of the week \\
+    quarter & Quarter of the year \\
+    relative\_date\_PCIAT & Current PCIAT minus previous day PCIAT \\
+    \hline
+    \end{tabular}
+    % \caption{Description of fields in the time-series dataset}
+    \label{table:fields}
+\end{table}
+
 \pagebreak
 
-\section*{Appendix B: Kaggle Starter Code}
+\section*{Appendix C: Kaggle Starter Code}
 \begin{mdframed}
 \begin{lstlisting}[breaklines=true]
 # Starter Notebook: Multi-Target Prediction Using CatBoost
@@ -449,31 +478,5 @@ test.select("id").with_columns(
 ).write_csv("submission.csv")
 \end{lstlisting}
 \end{mdframed}
-\section{Appendix}
-
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{|c|c|}
-    \hline
-    \textbf{Field} & \textbf{Description} \\
-    \hline
-    step & Step count \\
-    X & X-axis acceleration of the heartrate monitor \\
-    Y & Y-axis acceleration of the heartrate monitor \\
-    Z & Z-axis acceleration of the heartrate monitor \\
-    enmo & Euclidean Norm Minus One (ENMO) \\
-    anglez & Angle in the Z-axis \\
-    non-wear\_flag & Non-wear flag \\
-    light & Light exposure \\
-    battery\_voltage & Battery voltage of the monitor \\
-    time\_of\_day & Time of day \\
-    weekday & Day of the week \\
-    quarter & Quarter of the year \\
-    relative\_date\_PCIAT & Current PCIAT minus previous day PCIAT \\
-    \hline
-    \end{tabular}
-    \caption{Description of fields in the time-series dataset}
-    \label{table:fields}
-    \end{table}
 
 \end{document}

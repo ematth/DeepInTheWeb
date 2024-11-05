@@ -115,6 +115,8 @@ The final model will be an ensemble of the cross-sectional and sequential models
 
 The next steps entail training and evaluating different sequential models, amongst transformers and auto-encoders on the time-series data. The best model will be selected based on performance metrics, and the model will be used to compute an embedding of the time-series data. The embedding will be used as an additional set of features in the cross-sectional model. The final model will be an ensemble of the cross-sectional and sequential models, with the sequential model's embedding as an additional feature in the cross-sectional model. The classifier model will be retrained on the concatenated dataset, to predict the SII.
 
+Alternatively, an approach where PCIAT scores are preliminarily computed and then used to compute the SII score can be evaluated. This approach would be evaluated against the sequential model approach, and the best approach will be selected based on performance metrics.
+
 \section{Conclusions, discussions}
 
 \begin{mdframed}

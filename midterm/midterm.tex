@@ -105,11 +105,9 @@ The final model will be an ensemble of the cross-sectional and sequential models
 \end{mdframed}
 
 \section{Plan of Work} 
-\todo what are the next steps before the final report. Please be as precise as possible. Note that you will have about a month to finish the project, so make suitably calibrated plans, e.g., do not over/under promise.
+% \todo what are the next steps before the final report. Please be as precise as possible. Note that you will have about a month to finish the project, so make suitably calibrated plans, e.g., do not over/under promise.
 
-\begin{mdframed}
-    Add plan of work here
-\end{mdframed}
+The next steps entail training and evaluating different sequential models, amongst transformers and auto-encoders on the time-series data. The best model will be selected based on performance metrics, and the model will be used to compute an embedding of the time-series data. The embedding will be used as an additional set of features in the cross-sectional model. The final model will be an ensemble of the cross-sectional and sequential models, with the sequential model's embedding as an additional feature in the cross-sectional model. The classifier model will be retrained on the concatenated dataset, to predict the SII.
 
 \section{Conclusions, discussions}
 

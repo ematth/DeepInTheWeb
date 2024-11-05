@@ -1,9 +1,10 @@
 \documentclass[11pt]{extarticle}
 \usepackage[utf8]{inputenc}
-\usepackage{cite, authblk, mdframed}
 \usepackage[margin=1in]{geometry}
-\usepackage{graphicx}
-\usepackage{listings}
+\usepackage{graphicx, listings, titlesec, cite, authblk, mdframed}
+
+\titleformat{\section}
+  {\normalfont\fontsize{12}{15}\bfseries}{\thesection}{1em}{}
 
 \title{Project: Midterm Report}
 \author[1]{Evan Matthews}
@@ -18,16 +19,14 @@
 
 \maketitle
 
+\begin{abstract}
+    \todo summarizing the project\cite{Pettorruso2020-qt,Cash2012-rb,Aboujaoude2010-mc,Restrepo2020-pb}.
+\end{abstract}
+
 \pagebreak
 
 % \section{Title} 
 % starting with group id, please also include names of group members
-
-\section{Abstract}
-\todo summarizing the project\cite{Pettorruso2020-qt,Cash2012-rb,Aboujaoude2010-mc,Restrepo2020-pb}.
-
-\begin{mdframed}
-\end{mdframed}
 
 \section{Introduction}
 
@@ -166,7 +165,7 @@ The next steps entail training and evaluating different sequential models, among
 
 \pagebreak
 
-\section*{Appendix C: Kaggle Starter Code}
+\section*{Appendix C: Kaggle Starter Code \cite{antonina_dolgorukova_2024}}
 \begin{mdframed}
 \begin{lstlisting}[breaklines=true]
 # Starter Notebook: Multi-Target Prediction Using CatBoost

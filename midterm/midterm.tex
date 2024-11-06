@@ -1,7 +1,7 @@
 \documentclass[11pt]{extarticle}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
-\usepackage{graphicx, listings, titlesec, cite, authblk, mdframed}
+\usepackage{graphicx, listings, titlesec, cite, authblk, mdframed, floatrow}
 
 \titleformat{\section}
   {\normalfont\fontsize{12}{15}\bfseries}{\thesection}{1em}{}
@@ -13,14 +13,23 @@
 \affil[1]{CS 412 Group G6}
 \date{November 6th, 2024}
 
+% commands
 \newcommand{\todo}{\textcolor{red}{TODO:}~}
+\newfloatcommand{capbtabbox}{table}[][\FBwidth]
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-    \todo summarizing the project\cite{Pettorruso2020-qt,Cash2012-rb,Aboujaoude2010-mc,Restrepo2020-pb}.
+    The internet's pervasive role in modern life has raised concerns about Problematic Internet Use (PIU), particularly among children and teens. 
+    Our research aims to predict early signs of PIU using machine learning techniques applied to data from the Child Mind Institute's Healthy Brain Network. 
+    The study employs a comprehensive methodology combining cross-sectional and time-series data analysis. 
+    Initial results from multiple models, including Random Forest, XGBoost, SVM, and Feed Forward Neural Networks, demonstrate promising accuracy rates, with XGBoost achieving the highest mean accuracy of 0.6821. 
+    Our project experimentation is structured in three phases: data preprocessing, initial model evaluation, and fine-feature reevaluation. 
+    The methodology incorporates innovative approaches such as sequential modeling for time-series data and ensemble techniques combining cross-sectional and sequential models. 
+    Preliminary findings suggest that machine learning can effectively predict PIU severity using quantitative measures rather than traditional subjective assessments. 
+    This research contributes to the growing field of digital health by providing a data-driven approach to identifying at-risk youth for early intervention.
 \end{abstract}
 
 \pagebreak
@@ -28,19 +37,23 @@
 % \section{Title} 
 % starting with group id, please also include names of group members
 
-\section{Introduction}
+\section{Introduction, Motivation}
 
-The internet has become an integral part of our daily lives, with people of all ages spending a significant amount of time online. 
-This trend has given rise to concerns about the potential impacts of excessive internet use, particularly on children and teens.
-Problematic Internet Use (PIU) is a condition characterized by excessive or poorly controlled preoccupations, urges, or behaviors regarding computer use and internet access that lead to impairment or distress \cite{Pettorruso2020-qt}. 
-PIU has been associated with a range of mental health issues, including depression, anxiety, and impulsivity \cite{Cash2012-rb}.
-As such, identifying early signs of PIU in children and teens is crucial for prevention and intervention.
-In this project, we aim to predict early signs of PIU in children and teens using machine learning techniques, leveraging data from the Child Mind Institute's Healthy Brain Network.
-The project plan consists of three phases: data preprocessing, initial model evaluation, and fine-feature reevaluation.
-We will submit our work to the Child Mind Institute's (CMI) Kaggle competition on PIU prediction, and we also aim to publish our results as a paper should they outperform competition expectations.
+    The internet has become an integral part of our daily lives, with people of all ages spending a significant amount of time online. 
+    This trend has given rise to concerns about the potential impacts of excessive internet use, particularly on children and teens.
+    Problematic Internet Use (PIU) is a condition characterized by excessive or poorly controlled preoccupations, urges, or behaviors regarding computer use and internet access that lead to impairment or distress \cite{Pettorruso2020-qt}. 
+    PIU has been associated with a range of mental health issues, including depression, anxiety, and impulsivity \cite{Cash2012-rb}.
+    As such, identifying early signs of PIU in children and teens is crucial for prevention and intervention.
+    In this project, we aim to predict early signs of PIU in children and teens using machine learning techniques, leveraging data from the Child Mind Institute's Healthy Brain Network.
+    The project plan consists of three phases: data preprocessing, initial model evaluation, and fine-feature reevaluation.
+    We will submit our work to the Child Mind Institute's (CMI) Kaggle competition on PIU prediction, and we also aim to publish our results as a paper should they outperform competition expectations.
+
+    Despite having multiple studies showing the negative effects of excessive internet use, exact details about PIU warning signs and the most at-risk individuals are still unknown.
+    These studies can be useful, but their results focus primarily on written or binary feedback from students or parents. 
+    These studies can be useful, but they also introduce biases and often fail to show the true factors which correlate a participant's estimated internet impact \cite{Restrepo2020-pb,Aboujaoude2010-mc}.
 
 
-\section{Motivation} 
+% \section{Motivation} 
 
     % With the rise of machine learning and pattern prediction models, the ability to analyze and predict upon more complex data and parameters becomes much more approachable.
     % Likewise, child development is a multi-facted situation in which parenting and environmental factors can lead to an incredibly high number of outcomes.
@@ -48,17 +61,17 @@ We will submit our work to the Child Mind Institute's (CMI) Kaggle competition o
     % Additionally, predictions against an extensive number of possible outcomes like this represents a current roadblock in machine learning- that is, how modern predictive models can adapt to an ever-increasing set of parameters and decreasing set of training data.
     % Finally, child psychology is interested in recognizing patterns in early behavior in order to reduce the impact of harmful effects from a child's environment.
 
-    Despite having multiple studies showing the negative effects of excessive internet use, exact details about PIU warning signs and the most at-risk individuals are still unknown.
-    These studies can be useful, but their results focus primarily on written or binary feedback from students or parents. 
-    These studies can be useful, but they also introduce biases and often fail to show the true factors which correlate a participant's estimated internet impact \cite{Restrepo2020-pb,Aboujaoude2010-mc}.
+    % Despite having multiple studies showing the negative effects of excessive internet use, exact details about PIU warning signs and the most at-risk individuals are still unknown.
+    % These studies can be useful, but their results focus primarily on written or binary feedback from students or parents. 
+    % These studies can be useful, but they also introduce biases and often fail to show the true factors which correlate a participant's estimated internet impact \cite{Restrepo2020-pb,Aboujaoude2010-mc}.
 
-    Another major drawback of assessing PIU is in its subjective nature. 
-    Problematic internet use is characterized by many different variables that are hard to measure. 
-    As such, using quantitative measures such as the Severity Impairment Index (SII) allow for the application of data mining methods to aid in the classification of PIU severity. 
-    Moreover, other measurable attributes such as sleep quality and duration, physical activity level, and duration of internet usage can all be used to understand correlations with PIU.
-    This project intends to rectify these issues by using a machine-learning approach to predict early signs of PIU using a wider range of variables on children and teens.
+    % Another major drawback of assessing PIU is in its subjective nature. 
+    % Problematic internet use is characterized by many different variables that are hard to measure. 
+    % As such, using quantitative measures such as the Severity Impairment Index (SII) allow for the application of data mining methods to aid in the classification of PIU severity. 
+    % Moreover, other measurable attributes such as sleep quality and duration, physical activity level, and duration of internet usage can all be used to understand correlations with PIU.
+    % This project intends to rectify these issues by using a machine-learning approach to predict early signs of PIU using a wider range of variables on children and teens.
 
-\section{Related work} 
+\section{Related work, Scope} 
 
     Research on Problematic Internet Use (PIU) has gained significant attention due to its increasing prevalence and association with various psychological and behavioral issues. Early investigations into PIU highlighted its similarities with substance use disorders, impulse control disorders, and obsessive-compulsive disorder.
     
@@ -75,10 +88,10 @@ We will submit our work to the Child Mind Institute's (CMI) Kaggle competition o
     The field continues to evolve, with ongoing debates about diagnostic criteria and classification. While the Internet's positive impact on well-being is widely acknowledged, the pathological aspects of its use remain understudied, particularly regarding subtle psychological changes such as online disinhibition. 
     This highlights the need for additional research into the pathophysiology, epidemiology, natural course, and treatment of PIU to develop more effective intervention strategies.
 
-\section{Scope}
-
-    Given that the original scope of the project was accepted, we are pressing forward with this plan with no significant changes.
+    In terms of our current work, given that the original scope of the project was accepted, we are pressing forward with this plan with no significant changes.
     The most crucial critique provided- that the validation plan and evaluation metric were not clear- are likewise addressed in the methodology section.
+
+% \section{Scope}
 
 \section{Methodology} 
 % \todo what you are doing / planning to do from a data mining perspective. 
@@ -98,9 +111,13 @@ Multiple models will be evaluated on the cross-sectional data: Random Forest, XG
 The final model will be an ensemble of the cross-sectional and sequential models, with the sequential model's embedding as an additional feature in the cross-sectional model. The classifier model will be retrained on the concatenated dataset, to predict the SII.
 
 \section{Preliminary Results} 
-The results of the 10-fold cross-validation provide insight into the performance consistency of each model - Random Forest Classifier, XGBoost Classifier, Support Vector Classifier, and Feed Forward Neural Network across different subsets of the dataset. This method helps ensure that the reported accuracy is not overly dependent on any particular training subset, giving a more reliable view of how each model would perform in a real-world setting. These results are summarized in Table \ref*{'table:10foldcv-results'} and \ref{'table:mean_accuracy_table'}.
+The results of the 10-fold cross-validation provide insight into the performance consistency of each model - Random Forest Classifier, XGBoost Classifier, Support Vector Classifier, and Feed Forward Neural Network across different subsets of the dataset. 
+This method helps ensure that the reported accuracy is not overly dependent on any particular training subset, giving a more reliable view of how each model would perform in a real-world setting. 
+These results are summarized in Table \ref*{'table:10foldcv-results'} and \ref{'table:mean_accuracy_table'}.
+
 \begin{table}[h!]
     \centering
+    \resizebox{\columnwidth}{!}{%
     \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
         \hline
         \textbf{Model} & \textbf{Fold 1} & \textbf{Fold 2} & \textbf{Fold 3} & \textbf{Fold 4} & \textbf{Fold 5} & \textbf{Fold 6} & \textbf{Fold 7} & \textbf{Fold 8} & \textbf{Fold 9} & \textbf{Fold 10} \\
@@ -113,37 +130,67 @@ The results of the 10-fold cross-validation provide insight into the performance
         \hline
         FFN & 0.710 & 0.649 & 0.669 & 0.692 & 0.689 & 0.684 & 0.687 & 0.674 & 0.649 & 0.694 \\
         \hline
-    \end{tabular}
+    \end{tabular}%
+    }
     \caption{10-Fold Cross-Validation Results for Each Model}
     \label{'table:10foldcv-results'}
 \end{table}
 
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{|l|c|}
-        \hline
-        \textbf{Model} & \textbf{Mean Accuracy} \\
-        \hline
-        Random Forest Classifier & 0.680 \\
-        \hline
-        XGBoost Classifier & 0.682 \\
-        \hline
-        Support Vector Classifier & 0.650 \\
-        \hline
-        Feed Forward Neural Network & 0.680 \\
-        \hline
-    \end{tabular}
-    \caption{Mean Accuracy for Each Model}
-    \label{'table:mean_accuracy_table'}
-\end{table}
+% \begin{table}[h!]
+%     \centering
+%     \begin{tabular}{|l|c|}
+%         \hline
+%         \textbf{Model} & \textbf{Mean Accuracy} \\
+%         \hline
+%         Random Forest Classifier & 0.680 \\
+%         \hline
+%         XGBoost Classifier & 0.682 \\
+%         \hline
+%         Support Vector Classifier & 0.650 \\
+%         \hline
+%         Feed Forward Neural Network & 0.680 \\
+%         \hline
+%     \end{tabular}
+%     \caption{Mean Accuracy for Each Model}
+%     \label{'table:mean_accuracy_table'}
+% \end{table}
+
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[scale=0.8]{"./images/model_accuracy.jpg"}
+%     \caption{Model accuracy of Feed-Forward Neural Network}
+% \end{figure}
+
+\begin{figure}
+    \begin{floatrow}
+        \ffigbox{%
+            \includegraphics[scale=0.4]{"./images/model_accuracy.jpg"}
+        }{%
+            \caption{Model accuracy of Feed-Foward Neural Network}%
+        }
+        \capbtabbox{%
+            \resizebox{200pt}{!}{%
+            \begin{tabular}{|l|c|}
+                \hline
+                \textbf{Model} & \textbf{Mean Accuracy} \\
+                \hline
+                Random Forest Classifier & 0.680 \\
+                \hline
+                XGBoost Classifier & 0.682 \\
+                \hline
+                Support Vector Classifier & 0.650 \\
+                \hline
+                Feed Forward Neural Network & 0.680 \\
+                \hline
+            \end{tabular}%
+            }
+        }{%
+            \caption{Mean Accuracy for each model}%
+        }
+    \end{floatrow}
+\end{figure}
 
 Using hypothesis testing we conclude that XGBoost model is significantly better than the other models based on a Student's t-test at significance level $\alpha=5\%$ and number of parameters to be trained.
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.8]{"./images/model_accuracy.jpg"}
-    \caption{Model accuracy of Feed-Forward Neural Network}
-\end{figure}
 
 \section{Plan of Work} 
 % \todo what are the next steps before the final report. Please be as precise as possible. Note that you will have about a month to finish the project, so make suitably calibrated plans, e.g., do not over/under promise.

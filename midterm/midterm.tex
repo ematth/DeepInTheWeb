@@ -24,12 +24,12 @@
 \begin{abstract}
     The internet's pervasive role in modern life has raised concerns about Problematic Internet Use (PIU), particularly among children and teens. 
     Our research aims to predict early signs of PIU using machine learning techniques applied to data from the Child Mind Institute's Healthy Brain Network. 
-    The study employs a comprehensive methodology combining cross-sectional and time-series data analysis. 
-    Initial results from multiple models, including Random Forest, XGBoost, SVM, and Feed Forward Neural Networks, demonstrate promising accuracy rates, with XGBoost achieving the highest mean accuracy of 0.6821. 
+    This study employs a comprehensive methodology combining both cross-sectional and time-series data for future analysis. 
+    Initial results from multiple models, including Random Forest, XGBoost, SVM, and Feed Forward Neural Networks, demonstrate promising accuracy rates, with XGBoost achieving the highest mean accuracy of 0.682. 
     Our project experimentation is structured in three phases: data preprocessing, initial model evaluation, and fine-feature reevaluation. 
     The methodology incorporates innovative approaches such as sequential modeling for time-series data and ensemble techniques combining cross-sectional and sequential models. 
-    Preliminary findings suggest that machine learning can effectively predict PIU severity using quantitative measures rather than traditional subjective assessments. 
-    This research contributes to the growing field of digital health by providing a data-driven approach to identifying at-risk youth for early intervention.
+    Preliminary findings suggest that machine learning can effectively predict PIU severity using quantitative measures compared to traditional assessments. 
+    This research contributes to the growing field of digital health by providing a data-driven approach to identifying at-risk youth for PIU.
 \end{abstract}
 
 \pagebreak
@@ -44,13 +44,11 @@
     Problematic Internet Use (PIU) is a condition characterized by excessive or poorly controlled preoccupations, urges, or behaviors regarding computer use and internet access that lead to impairment or distress \cite{Pettorruso2020-qt}. 
     PIU has been associated with a range of mental health issues, including depression, anxiety, and impulsivity \cite{Cash2012-rb}.
     As such, identifying early signs of PIU in children and teens is crucial for prevention and intervention.
+    Despite having multiple studies showing the negative effects of excessive internet use, exact details about PIU warning signs and the most at-risk individuals are still unknown.
+    These studies can be useful, but they also introduce biases and often fail to show the true factors which correlate a participant's estimated internet impact \cite{Restrepo2020-pb,Aboujaoude2010-mc}.
     In this project, we aim to predict early signs of PIU in children and teens using machine learning techniques, leveraging data from the Child Mind Institute's Healthy Brain Network.
     The project plan consists of three phases: data preprocessing, initial model evaluation, and fine-feature reevaluation.
     We will submit our work to the Child Mind Institute's (CMI) Kaggle competition on PIU prediction, and we also aim to publish our results as a paper should they outperform competition expectations.
-
-    Despite having multiple studies showing the negative effects of excessive internet use, exact details about PIU warning signs and the most at-risk individuals are still unknown.
-    These studies can be useful, but their results focus primarily on written or binary feedback from students or parents. 
-    These studies can be useful, but they also introduce biases and often fail to show the true factors which correlate a participant's estimated internet impact \cite{Restrepo2020-pb,Aboujaoude2010-mc}.
 
 
 % \section{Motivation} 

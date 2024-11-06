@@ -15,8 +15,8 @@ RESOLVED - Unclear validation plan -- how will you evaluate your model beyond su
 
 
 3) Datasets and Validation Plan
-- Did not specify the evaluation metric that they are going to use
-- How are you going to create a validation set? (Train-validation-test splits, Cross-Validation, etc.)
+RESOLVED - Did not specify the evaluation metric that they are going to use
+RESOLVED - How are you going to create a validation set? (Train-validation-test splits, Cross-Validation, etc.)
 
 
 4) Alignment with material covered in course:

@@ -1,4 +1,4 @@
-\documentclass[11pt]{extarticle}
+\documentclass[12pt]{extarticle}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx, listings, titlesec, cite, authblk, mdframed, floatrow}
@@ -22,7 +22,7 @@
 \maketitle
 
 \begin{abstract}
-    The internet's pervasive role in modern life has raised concerns about Problematic Internet Use (PIU), particularly among children and teens. 
+    The Internet's pervasive role in modern life has raised concerns about Problematic Internet Use (PIU), particularly among children and teens. 
     Our research aims to predict early signs of PIU using machine learning techniques applied to data from the Child Mind Institute's Healthy Brain Network. 
     This study employs a comprehensive methodology combining both cross-sectional and time-series data for future analysis. 
     Initial results from multiple models, including Random Forest, XGBoost, SVM, and Feed Forward Neural Networks, demonstrate promising accuracy rates, with XGBoost achieving the highest mean accuracy of 0.682. 
@@ -39,7 +39,7 @@
 
 \section{Introduction, Motivation}
 
-    The internet has become an integral part of our daily lives, with people of all ages spending a significant amount of time online. 
+    The Internet has become an integral part of our daily lives, with people of all ages spending a significant amount of time online. 
     This trend has given rise to concerns about the potential impacts of excessive internet use, particularly on children and teens.
     Problematic Internet Use (PIU) is a condition characterized by excessive or poorly controlled preoccupations, urges, or behaviors regarding computer use and internet access that lead to impairment or distress \cite{Pettorruso2020-qt}. 
     PIU has been associated with a range of mental health issues, including depression, anxiety, and impulsivity \cite{Cash2012-rb}.
@@ -71,21 +71,19 @@
 
 \section{Related work and Scope} 
 
-    Research on Problematic Internet Use (PIU) has gained significant attention due to its increasing prevalence and association with various psychological and behavioral issues. Early investigations into PIU highlighted its similarities with substance use disorders, impulse control disorders, and obsessive-compulsive disorder.
-    
-    Studies have revealed concerning prevalence rates between 1.5\% and 8.2\% in the United States and Europe, emphasizing the growing social impact of this condition. 
+    Research on Problematic Internet Use (PIU) has gained significant attention due to its increasing prevalence and association with various psychological and behavioral issues. 
+    Early investigations into PIU highlighted its similarities with substance use disorders, impulse control disorders, and obsessive-compulsive disorder.
+    Studies have revealed concerning prevalence rates between 1.5\% and 8.2\% in the United States and Europe, emphasizing the growing social impact of this condition \cite{Cash2012-rb}. 
     The relationship between PIU and psychiatric disorders has been extensively documented, with research showing significant associations with depressive disorders and attention-deficit/hyperactivity disorder (ADHD). 
-    A notable study found that individuals with PIU were more than twice as likely to have depressive disorders $(aOR = 2.43)$, and showed increased likelihood of having ADHD combined presentation $(aOR = 1.91)$ and Autism Spectrum Disorder $(aOR = 2.24)$.
+    A notable study found that individuals with PIU were more than twice as likely to have depressive disorders $(aOR = 2.43)$, and showed increased likelihood of having ADHD combined presentation $(aOR = 1.91)$ and Autism Spectrum Disorder $(aOR = 2.24)$ \cite{Restrepo2020-pb}.
     
     Recent investigations have focused on understanding the personality profiles and emotional factors contributing to PIU. Research has identified specific personality traits associated with PIU, including lower scores in novelty seeking, harm avoidance, and reward dependence. 
     Additionally, emotional dysregulation has emerged as a significant factor, with studies suggesting that PIU may serve as a behavioral mechanism for escaping negative affects.
-    
     Treatment approaches for PIU have primarily centered on addressing comorbid conditions, with cognitive behavioral therapy and selective serotonin reuptake inhibitors showing promise as potential interventions.
-    However, researchers emphasize that detailed treatment guidelines require further investigation, particularly given the complex interplay between PIU and various psychological disorders.
-    
+    However, researchers emphasize that detailed treatment guidelines require further investigation, particularly given interactions between PIU and various psychological disorders.
+
     The field continues to evolve, with ongoing debates about diagnostic criteria and classification. While the Internet's positive impact on well-being is widely acknowledged, the pathological aspects of its use remain understudied, particularly regarding subtle psychological changes such as online disinhibition. 
     This highlights the need for additional research into the pathophysiology, epidemiology, natural course, and treatment of PIU to develop more effective intervention strategies.
-
     In terms of our current work, given that the original scope of the project was accepted, we are pressing forward with this plan with no significant changes.
     The most crucial critique provided- that the validation plan and evaluation metric were not clear- are likewise addressed in the methodology section.
 
@@ -99,19 +97,24 @@
 % You have to highlight alignment of the project with the course clearly, especially if you have received feedback on concerns regarding limited alignment with the course. 
 
 Data for this project has two components: cross-sectional, and time-series. The cross-sectional data is per participant and contains fields described in the following table.
-Each time-series dataset is per participant and each entry of the dataset represents the status of the participant's heartrate monitor at a given point in time. PCIAT is the Parent-Child Internet Addiction Test score, which is used to compute the Severity of Internet Addiction Index (SII) score. The SII score is the target variable for this project. For the description of fields in the time-series dataset, see Table \ref{table:fields}.
+Each time-series dataset is per participant and each entry of the dataset represents the status of the participant's heartrate monitor at a given point in time. 
+PCIAT is the Parent-Child Internet Addiction Test score, which is used to compute the Severity of Internet Addiction Index (SII) score. 
+The SII score is the target variable for this project. For the description of fields in the time-series dataset, see Table \ref{table:fields}.
 
 The project is divided into three phases: data preprocessing, initial model evaluation, and fine-feature reevaluation.
 The data preprocessing phase entails dropping survey-based fields used to compute PCIAT, which is then used to compute the SII, as our model's intention is to compute SII directly from the other metrics.
-Missing values in the data are filled using iterative imputation, and the missing SII values are filled in using K-Nearest Neighbors (k=5).
+Missing values in the data are filled using iterative imputation, and the missing SII values are filled in using K-Nearest Neighbors $(k=5)$.
 
-Multiple models will be evaluated on the cross-sectional data: Random Forest, XGBoost, SVM, and a feed forward neural network. After this, a sequential model, evaluated amongst transformers or auto-encoders, will be trained on the time-series data. The sequential model will allow us to compute an embedding of the time-series data, which will be used as an additional feature in the cross-sectional model.
-The final model will be an ensemble of the cross-sectional and sequential models, with the sequential model's embedding as an additional feature in the cross-sectional model. The classifier model will be retrained on the concatenated dataset, to predict the SII.
+Multiple models will be evaluated on the cross-sectional data: Random Forest, XGBoost, SVM, and a feed forward neural network. After this, a sequential model, evaluated amongst transformers or auto-encoders, will be trained on the time-series data. 
+The sequential model will allow us to compute an embedding of the time-series data, which will be used as an additional feature in the cross-sectional model.
+The final model will be an ensemble of the cross-sectional and sequential models, with the sequential model's embedding as an additional feature in the cross-sectional model. 
+The classifier model will be retrained on the concatenated dataset, to predict the SII.
+Finally, validation of the trained models is performed using 10-fold cross-validation, with the best model selected based on performance metrics.
 
 \section{Preliminary Results} 
 The results of the 10-fold cross-validation provide insight into the performance consistency of each model - Random Forest Classifier, XGBoost Classifier, Support Vector Classifier, and Feed Forward Neural Network across different subsets of the dataset. 
 This method helps ensure that the reported accuracy is not overly dependent on any particular training subset, giving a more reliable view of how each model would perform in a real-world setting. 
-These results are summarized in Table \ref{table:10foldcv-results} and \ref{'table:mean_accuracy_table'}.
+These results are summarized in Table 1 and 2.
 
 \begin{table}[h!]
     \centering
@@ -189,7 +192,7 @@ These results are summarized in Table \ref{table:10foldcv-results} and \ref{'tab
     \label{'table:mean_accuracy_table'}
 \end{figure}
 
-Using hypothesis testing we conclude that XGBoost model is significantly better than the other models based on a Student's t-test at significance level $\alpha=5\%$ and number of parameters to be trained.
+Using hypothesis testing, we conclude that XGBoost model is significantly better than the other models based on a Student's t-test at significance level $\alpha=5\%$ and number of parameters to be trained.
 
 \section{Plan of Work} 
 % \todo what are the next steps before the final report. Please be as precise as possible. Note that you will have about a month to finish the project, so make suitably calibrated plans, e.g., do not over/under promise.

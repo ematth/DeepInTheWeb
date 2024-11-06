@@ -69,7 +69,7 @@
     % Moreover, other measurable attributes such as sleep quality and duration, physical activity level, and duration of internet usage can all be used to understand correlations with PIU.
     % This project intends to rectify these issues by using a machine-learning approach to predict early signs of PIU using a wider range of variables on children and teens.
 
-\section{Related work, Scope} 
+\section{Related work and Scope} 
 
     Research on Problematic Internet Use (PIU) has gained significant attention due to its increasing prevalence and association with various psychological and behavioral issues. Early investigations into PIU highlighted its similarities with substance use disorders, impulse control disorders, and obsessive-compulsive disorder.
     
@@ -111,7 +111,7 @@ The final model will be an ensemble of the cross-sectional and sequential models
 \section{Preliminary Results} 
 The results of the 10-fold cross-validation provide insight into the performance consistency of each model - Random Forest Classifier, XGBoost Classifier, Support Vector Classifier, and Feed Forward Neural Network across different subsets of the dataset. 
 This method helps ensure that the reported accuracy is not overly dependent on any particular training subset, giving a more reliable view of how each model would perform in a real-world setting. 
-These results are summarized in Table \ref*{'table:10foldcv-results'} and \ref{'table:mean_accuracy_table'}.
+These results are summarized in Table \ref{table:10foldcv-results} and \ref{'table:mean_accuracy_table'}.
 
 \begin{table}[h!]
     \centering
@@ -131,7 +131,7 @@ These results are summarized in Table \ref*{'table:10foldcv-results'} and \ref{'
     \end{tabular}%
     }
     \caption{10-Fold Cross-Validation Results for Each Model}
-    \label{'table:10foldcv-results'}
+    \label{table:10foldcv-results}
 \end{table}
 
 % \begin{table}[h!]
@@ -186,6 +186,7 @@ These results are summarized in Table \ref*{'table:10foldcv-results'} and \ref{'
             \caption{Mean Accuracy for each model}%
         }
     \end{floatrow}
+    \label{'table:mean_accuracy_table'}
 \end{figure}
 
 Using hypothesis testing we conclude that XGBoost model is significantly better than the other models based on a Student's t-test at significance level $\alpha=5\%$ and number of parameters to be trained.

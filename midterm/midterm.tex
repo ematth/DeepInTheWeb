@@ -82,7 +82,7 @@
     Treatment approaches for PIU have primarily centered on addressing comorbid conditions, with cognitive behavioral therapy and selective serotonin reuptake inhibitors showing promise as potential interventions.
     However, researchers emphasize that detailed treatment guidelines require further investigation, particularly given interactions between PIU and various psychological disorders.
 
-    The field continues to evolve, with ongoing debates about diagnostic criteria and classification. While the Internet's positive impact on well-being is widely acknowledged, the pathological aspects of its use remain understudied, particularly regarding subtle psychological changes such as online disinhibition. 
+    Currently, the field continues to evolve, and debates haved continued regarding diagnostic criteria and classification. While the Internet's positive impact on well-being is widely acknowledged, the pathological aspects of its use remain understudied, particularly regarding subtle psychological changes such as online disinhibition. 
     This highlights the need for additional research into the pathophysiology, epidemiology, natural course, and treatment of PIU to develop more effective intervention strategies.
     In terms of our current work, given that the original scope of the project was accepted, we are pressing forward with this plan with no significant changes.
     The most crucial critique provided- that the validation plan and evaluation metric were not clear- are likewise addressed in the methodology section.
@@ -96,46 +96,47 @@
 % Please include a clear evaluation plan, including train-val-test splits, cross-validation, hyper-parameter tuning, and explain clearly how you will do these. 
 % You have to highlight alignment of the project with the course clearly, especially if you have received feedback on concerns regarding limited alignment with the course. 
 
-Data for this project has two components: cross-sectional, and time-series. The cross-sectional data is per participant and contains fields described in the following table.
-Each time-series dataset is per participant and each entry of the dataset represents the status of the participant's heartrate monitor at a given point in time. 
-PCIAT is the Parent-Child Internet Addiction Test score, which is used to compute the Severity of Internet Addiction Index (SII) score. 
-The SII score is the target variable for this project. For the description of fields in the time-series dataset, see Table \ref{table:fields}.
+    Data for this project has two components: cross-sectional, and time-series. The cross-sectional data is per participant and contains fields described in the following table.
+    Each time-series dataset is per participant and each entry of the dataset represents the status of the participant's heartrate monitor at a given point in time. 
+    PCIAT is the Parent-Child Internet Addiction Test score, which is used to compute the Severity of Internet Addiction Index (SII) score. 
+    The SII score is the target variable for this project. For the description of fields in the time-series dataset, see Table \ref{table:fields}.
 
-The project is divided into three phases: data preprocessing, initial model evaluation, and fine-feature reevaluation.
-The data preprocessing phase entails dropping survey-based fields used to compute PCIAT, which is then used to compute the SII, as our model's intention is to compute SII directly from the other metrics.
-Missing values in the data are filled using iterative imputation, and the missing SII values are filled in using K-Nearest Neighbors $(k=5)$.
+    The project is divided into three phases: data preprocessing, initial model evaluation, and fine-feature reevaluation.
+    The data preprocessing phase entails dropping survey-based fields used to compute PCIAT, which is then used to compute the SII, as our model's intention is to compute SII directly from the other metrics.
+    Missing values in the data are filled using iterative imputation, and the missing SII values are filled in using K-Nearest Neighbors $(k=5)$.
 
-Multiple models will be evaluated on the cross-sectional data: Random Forest, XGBoost, SVM, and a feed forward neural network. After this, a sequential model, evaluated amongst transformers or auto-encoders, will be trained on the time-series data. 
-The sequential model will allow us to compute an embedding of the time-series data, which will be used as an additional feature in the cross-sectional model.
-The final model will be an ensemble of the cross-sectional and sequential models, with the sequential model's embedding as an additional feature in the cross-sectional model. 
-The classifier model will be retrained on the concatenated dataset, to predict the SII.
-Finally, validation of the trained models is performed using 10-fold cross-validation, with the best model selected based on performance metrics.
+    Multiple models will be evaluated on the cross-sectional data: Random Forest, XGBoost, SVM, and a feed forward neural network. After this, a sequential model, evaluated amongst transformers or auto-encoders, will be trained on the time-series data. 
+    The sequential model will allow us to compute an embedding of the time-series data, which will be used as an additional feature in the cross-sectional model.
+    The final model will be an ensemble of the cross-sectional and sequential models, with the sequential model's embedding as an additional feature in the cross-sectional model. 
+    The classifier model will be retrained on the concatenated dataset, to predict the SII.
+    Finally, validation of the trained models is performed using 10-fold cross-validation, with the best model selected based on performance metrics.
 
 \section{Preliminary Results} 
-The results of the 10-fold cross-validation provide insight into the performance consistency of each model - Random Forest Classifier, XGBoost Classifier, Support Vector Classifier, and Feed Forward Neural Network across different subsets of the dataset. 
-This method helps ensure that the reported accuracy is not overly dependent on any particular training subset, giving a more reliable view of how each model would perform in a real-world setting. 
-These results are summarized in Table 1 and 2.
 
-\begin{table}[h!]
-    \centering
-    \resizebox{\columnwidth}{!}{%
-    \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
-        \hline
-        \textbf{Model} & \textbf{Fold 1} & \textbf{Fold 2} & \textbf{Fold 3} & \textbf{Fold 4} & \textbf{Fold 5} & \textbf{Fold 6} & \textbf{Fold 7} & \textbf{Fold 8} & \textbf{Fold 9} & \textbf{Fold 10} \\
-        \hline
-        RF & 0.684 & 0.682 & 0.682 & 0.674 & 0.687 & 0.674 & 0.684 & 0.707 & 0.649 & 0.672 \\
-        \hline
-        XGB& 0.689 & 0.667 & 0.669 & 0.689 & 0.682 & 0.684 & 0.674 & 0.732 & 0.636 & 0.694 \\
-        \hline
-        SVC & 0.649 & 0.657 & 0.646 & 0.649 & 0.649 & 0.646 & 0.649 & 0.649 & 0.654 & 0.652 \\
-        \hline
-        FFN & 0.710 & 0.649 & 0.669 & 0.692 & 0.689 & 0.684 & 0.687 & 0.674 & 0.649 & 0.694 \\
-        \hline
-    \end{tabular}%
-    }
-    \caption{10-Fold Cross-Validation Results for Each Model}
-    \label{table:10foldcv-results}
-\end{table}
+    The results of the 10-fold cross-validation provide insight into the performance consistency of each model - Random Forest Classifier, XGBoost Classifier, Support Vector Classifier, and Feed Forward Neural Network across different subsets of the dataset. 
+    This method helps ensure that the reported accuracy is not overly dependent on any particular training subset, giving a more reliable view of how each model would perform in a real-world setting. 
+    These results are summarized in Table 1 and 2.
+
+    \begin{table}[h!]
+        \centering
+        \resizebox{\columnwidth}{!}{%
+        \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \textbf{Model} & \textbf{Fold 1} & \textbf{Fold 2} & \textbf{Fold 3} & \textbf{Fold 4} & \textbf{Fold 5} & \textbf{Fold 6} & \textbf{Fold 7} & \textbf{Fold 8} & \textbf{Fold 9} & \textbf{Fold 10} \\
+            \hline
+            RF & 0.684 & 0.682 & 0.682 & 0.674 & 0.687 & 0.674 & 0.684 & 0.707 & 0.649 & 0.672 \\
+            \hline
+            XGB& 0.689 & 0.667 & 0.669 & 0.689 & 0.682 & 0.684 & 0.674 & 0.732 & 0.636 & 0.694 \\
+            \hline
+            SVC & 0.649 & 0.657 & 0.646 & 0.649 & 0.649 & 0.646 & 0.649 & 0.649 & 0.654 & 0.652 \\
+            \hline
+            FFN & 0.710 & 0.649 & 0.669 & 0.692 & 0.689 & 0.684 & 0.687 & 0.674 & 0.649 & 0.694 \\
+            \hline
+        \end{tabular}%
+        }
+        \caption{10-Fold Cross-Validation Results for Each Model}
+        \label{table:10foldcv-results}
+    \end{table}
 
 % \begin{table}[h!]
 %     \centering
@@ -162,49 +163,48 @@ These results are summarized in Table 1 and 2.
 %     \caption{Model accuracy of Feed-Forward Neural Network}
 % \end{figure}
 
-\begin{figure}
-    \begin{floatrow}
-        \ffigbox{%
-            \includegraphics[scale=0.4]{"./images/model_accuracy.jpg"}
-        }{%
-            \caption{Model accuracy of Feed-Foward Neural Network}%
-        }
-        \capbtabbox{%
-            \resizebox{200pt}{!}{%
-            \begin{tabular}{|l|c|}
-                \hline
-                \textbf{Model} & \textbf{Mean Accuracy} \\
-                \hline
-                Random Forest Classifier & 0.680 \\
-                \hline
-                XGBoost Classifier & 0.682 \\
-                \hline
-                Support Vector Classifier & 0.650 \\
-                \hline
-                Feed Forward Neural Network & 0.680 \\
-                \hline
-            \end{tabular}%
+    \begin{figure}
+        \begin{floatrow}
+            \ffigbox{%
+                \includegraphics[scale=0.4]{"./images/model_accuracy.jpg"}
+            }{%
+                \caption{Model accuracy of Feed-Foward Neural Network}%
             }
-        }{%
-            \caption{Mean Accuracy for each model}%
-        }
-    \end{floatrow}
-    \label{'table:mean_accuracy_table'}
-\end{figure}
+            \capbtabbox{%
+                \resizebox{200pt}{!}{%
+                \begin{tabular}{|l|c|}
+                    \hline
+                    \textbf{Model} & \textbf{Mean Accuracy} \\
+                    \hline
+                    Random Forest Classifier & 0.680 \\
+                    \hline
+                    XGBoost Classifier & 0.682 \\
+                    \hline
+                    Support Vector Classifier & 0.650 \\
+                    \hline
+                    Feed Forward Neural Network & 0.680 \\
+                    \hline
+                \end{tabular}%
+                }
+            }{%
+                \caption{Mean Accuracy for each model}%
+            }
+        \end{floatrow}
+        \label{'table:mean_accuracy_table'}
+    \end{figure}
 
-Using hypothesis testing, we conclude that XGBoost model is significantly better than the other models based on a Student's t-test at significance level $\alpha=5\%$ and number of parameters to be trained.
+    Using hypothesis testing, we conclude that XGBoost model is significantly better than the other models based on a Student's t-test at significance level $\alpha=5\%$ and number of parameters to be trained.
 
 \section{Plan of Work} 
-% \todo what are the next steps before the final report. Please be as precise as possible. Note that you will have about a month to finish the project, so make suitably calibrated plans, e.g., do not over/under promise.
 
-The next steps entail training and evaluating different sequential models, amongst transformers and auto-encoders on the time-series data. 
-The best model will be selected based on performance metrics, and the model will be used to compute an embedding of the time-series data. 
-The embedding will be used as an additional set of features in the cross-sectional model. 
-The final model will be an ensemble of the cross-sectional and sequential models, with the sequential model's embedding as an additional feature in the cross-sectional model. 
-The classifier model will be retrained on the concatenated dataset, to predict the SII.
+    The next steps entail training and evaluating different sequential models, amongst transformers and auto-encoders on the time-series data. 
+    The best model will be selected based on performance metrics, and the model will be used to compute an embedding of the time-series data. 
+    The embedding will be used as an additional set of features in the cross-sectional model. 
+    The final model will be an ensemble of the cross-sectional and sequential models, with the sequential model's embedding as an additional feature in the cross-sectional model. 
+    The classifier model will be retrained on the concatenated dataset, to predict the SII.
 
-Alternatively, an approach where PCIAT scores are preliminarily computed and then used to compute the SII score can be evaluated. 
-This approach would be evaluated against the sequential model approach, and the best approach will be selected based on performance metrics.
+    Alternatively, an approach where PCIAT scores are preliminarily computed and then used to compute the SII score can be evaluated. 
+    This approach would be evaluated against the sequential model approach, and the best approach will be selected based on performance metrics.
 
 \section{Conclusions, discussions}
 

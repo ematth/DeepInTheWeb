@@ -166,3 +166,10 @@ cython_debug/
 #.idea/
 
 *.pdf
+
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.synctex.gz

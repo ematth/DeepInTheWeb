@@ -1,6 +1,7 @@
 # Data Files
 *.zip
 child-mind-institute-problematic-internet-use/
+dataset/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -2,6 +2,8 @@
 *.zip
 child-mind-institute-problematic-internet-use/
 
+sig-proc-approach/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

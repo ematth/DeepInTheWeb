@@ -32,7 +32,6 @@
     Preliminary findings suggest that machine learning can effectively predict PIU severity using quantitative measures compared to traditional assessments. 
     This research contributes to the growing field of digital health by providing a data-driven approach to identifying at-risk youth for PIU.
 \end{abstract}
-
 \pagebreak
 
 \section{Introduction}
@@ -101,7 +100,21 @@
   The classifier model will be retrained on the concatenated dataset, to predict the SII.
   Finally, validation of the trained models is performed using 10-fold cross-validation, with the best model selected based on performance metrics.
 
-  After comparing classifiers and selecting the best model, we land on the following methodology: first, XGBoost is trained on the cross-sectional data, where missing values are filled using label propagation. A transformer encoder is trained on the time-series data using reconstruction loss, and the encoder is used to compute an embedding of the time-series data. The embedding is concatenated with the cross-sectional data, and the XGBoost model is retrained on the concatenated dataset. In the testing phase, for a datapoint that has a time-series component, the transformer encoder is used to compute the embedding, which is then concatenated with the cross-sectional data and fed into the XGBoost model to predict the SII. If time-series data is not available, the XGBoost model is used to predict the SII directly from the cross-sectional data.
+  After comparing classifiers and selecting the best model, we land on the following methodology: 
+  first, XGBoost is trained on the cross-sectional data, where missing values are filled using label propagation. 
+  A transformer encoder is trained on the time-series data using reconstruction loss, and the encoder is used to compute an embedding of the time-series data. 
+  The embedding is concatenated with the cross-sectional data, and the XGBoost model is retrained on the concatenated dataset.
+  In the testing phase, for a datapoint that has a time-series component, the transformer encoder is used to compute the embedding, which is then concatenated with the cross-sectional data and fed into the XGBoost model to predict the SII. 
+  If time-series data is not available, the XGBoost model is used to predict the SII directly from the cross-sectional data.
+
+  \begin{figure}
+    \centering
+    \includegraphics[scale=0.25]{images/cmi-sii-architecture.png}
+    \caption{Model architecture}
+    \label{'table:architecture'}
+  \end{figure}
+
+
 
   \subsection{Results} 
   \subsubsection{Cross-Sectional Data}

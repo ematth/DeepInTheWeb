@@ -165,6 +165,7 @@
         \label{'table:mean_accuracy_table'}
     \end{table}
 
+
     % \begin{figure}[h!]
     %     \centering
     %     \includegraphics[scale=0.8]{"./images/model_accuracy.jpg"}
@@ -179,26 +180,41 @@
       The model was trained using reconstruction loss, and the encoder was used to compute an embedding of the time-series data.
       The loss curve for the transformer model is shown in Figure \ref{fig:transformer_loss}.
 
-      \begin{figure}
-          \centering
-          \includegraphics[scale=0.25]{"./images/transformer_loss.jpeg"}
-          \caption{Transformer reconstruction loss over time.}
-          \label{fig:transformer_loss}
-      \end{figure}
+      \begin{figure}[!htb]
+        \begin{minipage}{0.48\textwidth}
+            \centering
+            \includegraphics[scale=0.25]{"./images/transformer_loss.jpeg"}
+            \caption{Transformer reconstruction loss over time; model accuracies, with and without extra features.}
+            \label{fig:transformer_loss}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.48\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{"./images/model_bars.png"}
+            % \caption{Model accuracies, with and without extra features.}
+            \label{fig:transformer_accuracy}
+        \end{minipage}
+    \end{figure}
 
       After 10 epochs of training, each patient with time-series data had an embedding computed, which was then used as an additional feature in the cross-sectional XGBoost model.
       The XGBoost model with the same maximum depth ($depth=15$), when trained on the concatenated dataset, achieved a lower validation accuracy than the model trained on the cross-sectional data alone, however the model achieved 100\% accuracy on the training data, suggesting overfitting.
       As such, the XGBoost model was retrained on the concatenated dataset with a lower maxmimum depth ($depth=10$).
       The 10-fold cross-validation results for the retrained model are shown in Figure \ref{fig:transformer_accuracy}.
 
-      \begin{figure}
-          \centering
-          \includegraphics[width=0.5\linewidth]{"./images/model_bars.png"}
-          \caption{Model accuracy of XGBoost model with transformer embedding}
-          \label{fig:transformer_accuracy}
-      \end{figure}
+      
 
 \section{Discussion and Conclusion}
+
+Nevertheless, results concerning both cross-sectional and sequential data have shown great promise with respect to accuracy optimization.
+In particular, we show that our method of including additional features from the sequential data can improve the overall accuracy of the model by 10 percent.
+And while this method may seem trivial and obvious to use, its implications were not fully understood by our team until we performed quantitative comparisons.
+
+In terms of the Kaggle competition, we are confident that our model will perform well, given the results of our cross-validation and the improvements made by learning on sequential data.
+However, we also understand that, due to time constraints and outside factors beyond our control, our model may not be the best and could use further improvements for medal qualification.
+
+Lastly, while we planned to produce model accuracies on a feature-optimizing basis, we were unable to do so due to time constraints.
+We believe that this would have been a valuable addition to our project, and we hope to include this in future work.
+Architecture diagrams and relevant code can be provided upon request.
 
 % Code and related documentation can be found at \url{https://github.com/ematth/DeepInTheWeb}.
 

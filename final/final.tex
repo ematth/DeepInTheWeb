@@ -32,7 +32,7 @@
     The methodology incorporates innovative approaches such as sequential modeling for time-series data and ensemble techniques combining cross-sectional and sequential models. 
     Preliminary findings suggest that machine learning can effectively predict PIU severity using quantitative measures compared to traditional assessments. 
     This research contributes to the growing field of digital health by providing a data-driven approach to identifying at-risk youth for PIU.
-    Code for the analysis can be found at this \href{https://github.com/ematth/CS-412-Proj/tree/main}{Github Repository}.
+    Code for the analysis can be found at this \href{https://github.com/ematth/DeepInTheWeb}{Github Repository}.
 \end{abstract}
 \pagebreak
 
@@ -47,19 +47,20 @@
   These studies can be useful, but they also introduce biases and often fail to show the true factors which correlate a participant's estimated internet impact \cite{Restrepo2020-pb,Aboujaoude2010-mc}.
   In this project, we aim to predict early signs of PIU in children and teens using machine learning techniques, leveraging data from the Child Mind Institute's Healthy Brain Network.
   The project plan consists of three phases: data preprocessing, initial model evaluation, and fine-feature reevaluation.
-  We will submit our work to the Child Mind Institute's (CMI) Kaggle competition on PIU prediction, and we also aim to publish our results as a paper should they outperform competition expectations.
+  We will submit our work to the Child Mind Institute's (CMI) Kaggle competition on PIU prediction at a later date.
 
 \section{Motivation}
 
   With the rise of machine learning and pattern prediction models, the ability to analyze and predict upon more complex data and parameters becomes much more approachable.
   Likewise, child development is a multi-facted situation in which parenting and environmental factors can lead to an incredibly high number of outcomes.
   This field has had great strides in classical research, but a more modern approach could lead to significant development in the success of future generations.
-  Additionally, predictions against an extensive number of possible outcomes like this represents a current roadblock in machine learning- that is, how modern predictive models can adapt to an ever-increasing set of parameters and decreasing set of training data.
+  Additionally, predictions against an extensive number of possible outcomes like this represents a current roadblock in machine learning- 
+  that is, how modern predictive models can adapt to an ever-increasing set of parameters and decreasing set of training data.
   Finally, child psychology is interested in recognizing patterns in early behavior in order to reduce the impact of harmful effects from a child's environment.
 
   Despite having multiple studies showing the negative effects of excessive internet use, exact details about PIU warning signs and the most at-risk individuals are still unknown.
   These studies can be useful, but their results focus primarily on written or binary feedback from students or parents. 
-  These studies can be useful, but they also introduce biases and often fail to show the true factors which correlate a participant's estimated internet impact \cite{Restrepo2020-pb,Aboujaoude2010-mc}.
+  Additionally, they introduce biases and often fail to show the true factors which correlate a participant's estimated internet impact \cite{Restrepo2020-pb,Aboujaoude2010-mc}.
 
   Another major drawback of assessing PIU is in its subjective nature. 
   Problematic internet use is characterized by many different variables that are hard to measure. 
@@ -87,8 +88,8 @@
 
 \section{Methodology}
 
-  Data for this project has two components: cross-sectional, and time-series. The cross-sectional data is per participant and contains fields described in the following table.
-  Each time-series dataset is per participant and each entry of the dataset represents the status of the participant's heartrate monitor at a given point in time. 
+  Data for this project has two components: cross-sectional, and sequential (time-series). The cross-sectional data is per participant and contains fields described in the following table.
+  Each sequential dataset is per participant and each entry of the dataset represents the status of the participant's heartrate monitor at a given point in time. 
   PCIAT is the Parent-Child Internet Addiction Test score, which is used to compute the Severity of Internet Addiction Index (SII) score. 
   The SII score is the target variable for this project. For the description of fields in the time-series dataset, see Table \ref{table:fields}.
 
@@ -96,17 +97,19 @@
   The data preprocessing phase entails dropping survey-based fields used to compute PCIAT, which is then used to compute the SII, as our model's intention is to compute SII directly from the other metrics.
   Missing values in the data are filled using iterative imputation, and the missing SII values are filled in using K-Nearest Neighbors $(k=5)$.
 
-  Multiple models will be evaluated on the cross-sectional data: Random Forest, XGBoost, SVM, and a feed forward neural network. After this, a sequential model, evaluated amongst transformers or auto-encoders, will be trained on the time-series data. 
-  The sequential model will allow us to compute an embedding of the time-series data, which will be used as an additional feature in the cross-sectional model.
-  The final model will be an ensemble of the cross-sectional and sequential models, with the sequential model's embedding as an additional feature in the cross-sectional model. 
-  The classifier model will be retrained on the concatenated dataset, to predict the SII.
+  Multiple models are evaluated on the cross-sectional data: Random Forest, XGBoost, SVM, and a feed forward neural network. 
+  After this, a sequential model, evaluated amongst transformers or auto-encoders, is trained on the time-series data. 
+  The sequential model allows us to compute an embedding of the time-series data, which will be used as an additional feature in the cross-sectional model.
+  The final model is an ensemble of the cross-sectional and sequential models, with the sequential model's embedding as an additional feature in the cross-sectional model. 
+  The classifier model is retrained on the concatenated dataset, to predict the SII.
   Finally, validation of the trained models is performed using 10-fold cross-validation, with the best model selected based on performance metrics.
 
   After comparing classifiers and selecting the best model, we land on the architecture shown in Figure \ref{'table:architecture'}.
-  first, XGBoost is trained on the cross-sectional data, where missing values are filled using label propagation. 
+  First, XGBoost is trained on the cross-sectional data, where missing values are filled using label propagation. 
   A transformer encoder is trained on the time-series data using reconstruction loss, and the encoder is used to compute an embedding of the time-series data. 
   The embedding is concatenated with the cross-sectional data, and the XGBoost model is retrained on the concatenated dataset.
-  In the testing phase, for a datapoint that has a time-series component, the transformer encoder is used to compute the embedding, which is then concatenated with the cross-sectional data and fed into the XGBoost model to predict the SII. 
+  In the testing phase, for a datapoint that has a time-series component, the transformer encoder is used to compute the embedding, 
+  which is then concatenated with the cross-sectional data and fed into the XGBoost model to predict the SII. 
   If time-series data is not available, the XGBoost model is used to predict the SII directly from the cross-sectional data.
 
   \begin{figure}
@@ -121,8 +124,10 @@
   \subsection{Results} 
   \subsubsection{Cross-Sectional Data}
 
-    Preliminary results of 10-fold cross-validation provide insight into the performance consistency of each model - Random Forest Classifier, XGBoost Classifier, Support Vector Classifier, and Feed Forward Neural Network across different subsets of the dataset. 
-    This method helps ensure that the reported accuracy is not overly dependent on any particular training subset, giving a more reliable view of how each model would perform in a real-world setting. 
+    Preliminary results of 10-fold cross-validation provide insight into the performance consistency of each model- 
+    Random Forest Classifier, XGBoost Classifier, Support Vector Classifier, and Feed Forward Neural Network across different subsets of the dataset. 
+    This method helps ensure that the reported accuracy is not overly dependent on any particular training subset, 
+    giving a more reliable view of how each model would perform in a real-world setting. 
     These results are summarized in Table \ref{table:10foldcv-results} and Table \ref{'table:mean_accuracy_table'}.
 
     \begin{table}[h!]
@@ -183,7 +188,7 @@
       \begin{figure}[!htb]
         \begin{minipage}{0.48\textwidth}
             \centering
-            \includegraphics[scale=0.25]{"./images/transformer_loss.jpeg"}
+            \includegraphics[scale=0.22]{"./images/transformer_loss.jpeg"}
             \caption{Transformer reconstruction loss over time; model accuracies, with and without extra features.}
             \label{fig:transformer_loss}
         \end{minipage}
@@ -196,8 +201,9 @@
         \end{minipage}
     \end{figure}
 
-      After 10 epochs of training, each patient with time-series data had an embedding computed, which was then used as an additional feature in the cross-sectional XGBoost model.
-      The XGBoost model with the same maximum depth ($depth=15$), when trained on the concatenated dataset, achieved a lower validation accuracy than the model trained on the cross-sectional data alone, however the model achieved 100\% accuracy on the training data, suggesting overfitting.
+      After 10 epochs of training, each patient with time-series data has an embedding computed, which is then used as an additional feature in the cross-sectional XGBoost model.
+      The XGBoost model with the same maximum depth ($depth=15$), when trained on the concatenated dataset, achieves a lower validation accuracy than the model trained on the cross-sectional data alone. 
+      However, the model achieved 100\% accuracy on the training data, suggesting overfitting.
       As such, the XGBoost model was retrained on the concatenated dataset with a lower maxmimum depth ($depth=10$).
       The 10-fold cross-validation results for the retrained model are shown in Figure \ref{fig:transformer_accuracy}.
 
@@ -205,7 +211,7 @@
 
 \section{Discussion and Conclusion}
 
-Nevertheless, results concerning both cross-sectional and sequential data have shown great promise with respect to accuracy optimization.
+To conclude, results concerning both cross-sectional and sequential data have shown great promise with respect to accuracy optimization.
 In particular, we show that our method of including additional features from the sequential data can improve the overall accuracy of the model by 10 percent.
 And while this method may seem trivial and obvious to use, its implications were not fully understood by our team until we performed quantitative comparisons.
 

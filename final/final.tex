@@ -163,12 +163,6 @@
         \label{'table:mean_accuracy_table'}
     \end{table}
 
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[scale=0.8]{"./images/model_accuracy.jpg"}
-        \caption{Model accuracy of Feed-Forward Neural Network}
-    \end{figure}
-
     Using hypothesis testing, we conclude that XGBoost model is significantly better than the other models based on a Student's t-test at significance level $\alpha=5\%$ and number of parameters to be trained.
 
   \subsubsection{Sequential Data}
@@ -180,6 +174,13 @@
           \centering
           \includegraphics[scale=0.25]{"./images/transformer_loss.jpeg"}
           \caption{Transformer reconstruction loss over time.}
+      \end{figure}
+
+      \begin{figure}
+        \centering
+        \includegraphics[scale=0.8]{images/model_bars.png}
+        \caption{Model accuracies, with and without extra features}
+        \label{'table:model_bars'}
       \end{figure}
 
       After 10 epochs of training, each patient with time-series data had an embedding computed, which was then used as an additional feature in the cross-sectional XGBoost model.

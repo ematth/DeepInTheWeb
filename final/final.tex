@@ -171,14 +171,20 @@
 
     Using hypothesis testing, we conclude that XGBoost model is significantly better than the other models based on a Student's t-test at significance level $\alpha=5\%$ and number of parameters to be trained.
 
-\section{Empirical Results}
+  \subsubsection{Sequential Data}
+  
+      The sequential model was trained on the time-series data using a transformer encoder. 
+      The model was trained using reconstruction loss, and the encoder was used to compute an embedding of the time-series data.
 
-\begin{figure}[h!]
-  \centering
-  \includegraphics[scale=0.4]{"./images/feature_importance.jpg"}
-  \caption{Features plotted in order of importance, ascending.}
-\end{figure}
+      \begin{figure}
+          \centering
+          \includegraphics[scale=0.25]{"./images/transformer_loss.jpeg"}
+          \caption{Transformer reconstruction loss over time.}
+      \end{figure}
 
+      After 10 epochs of training, each patient with time-series data had an embedding computed, which was then used as an additional feature in the cross-sectional XGBoost model.
+      The XGBoost model with the same maximum depth ($depth=15$), when trained on the concatenated dataset, achieved a lower validation accuracy than the model trained on the cross-sectional data alone, however the model achieved 100\% accuracy on the training data, suggesting overfitting.
+      As such, the XGBoost model was retrained on the concatenated dataset with a lower maxmimum depth ($depth=10$).
 
 \section{Discussion and Conclusion}
 

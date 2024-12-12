@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
 \usepackage[title]{appendix}
-\usepackage{graphicx, listings, titlesec, cite, authblk, mdframed, floatrow}
+\usepackage{graphicx, listings, titlesec, cite, authblk, mdframed, floatrow, hyperref}
 
 \titleformat{\section}
   {\normalfont\fontsize{12}{15}\bfseries}{\thesection}{1em}{}
@@ -31,6 +31,7 @@
     The methodology incorporates innovative approaches such as sequential modeling for time-series data and ensemble techniques combining cross-sectional and sequential models. 
     Preliminary findings suggest that machine learning can effectively predict PIU severity using quantitative measures compared to traditional assessments. 
     This research contributes to the growing field of digital health by providing a data-driven approach to identifying at-risk youth for PIU.
+    Code for the analysis can be found at this \href{https://github.com/ematth/CS-412-Proj/tree/main}{Github Repository}.
 \end{abstract}
 \pagebreak
 
@@ -100,7 +101,7 @@
   The classifier model will be retrained on the concatenated dataset, to predict the SII.
   Finally, validation of the trained models is performed using 10-fold cross-validation, with the best model selected based on performance metrics.
 
-  After comparing classifiers and selecting the best model, we land on the following methodology: 
+  After comparing classifiers and selecting the best model, we land on the architecture shown in Figure \ref{'table:architecture'}.
   first, XGBoost is trained on the cross-sectional data, where missing values are filled using label propagation. 
   A transformer encoder is trained on the time-series data using reconstruction loss, and the encoder is used to compute an embedding of the time-series data. 
   The embedding is concatenated with the cross-sectional data, and the XGBoost model is retrained on the concatenated dataset.
@@ -109,7 +110,7 @@
 
   \begin{figure}
     \centering
-    \includegraphics[width=0.5\linewidth]{images/schematic.png}
+    \includegraphics[width=0.55\linewidth]{images/schematic.png}
     \caption{Model architecture}
     \label{'table:architecture'}
   \end{figure}
@@ -121,7 +122,7 @@
 
     Preliminary results of 10-fold cross-validation provide insight into the performance consistency of each model - Random Forest Classifier, XGBoost Classifier, Support Vector Classifier, and Feed Forward Neural Network across different subsets of the dataset. 
     This method helps ensure that the reported accuracy is not overly dependent on any particular training subset, giving a more reliable view of how each model would perform in a real-world setting. 
-    These results are summarized in Table 1 and 2.
+    These results are summarized in Table \ref{table:10foldcv-results} and Table \ref{'table:mean_accuracy_table'}.
 
     \begin{table}[h!]
         \centering
@@ -163,11 +164,11 @@
         \label{'table:mean_accuracy_table'}
     \end{table}
 
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[scale=0.8]{"./images/model_accuracy.jpg"}
-        \caption{Model accuracy of Feed-Forward Neural Network}
-    \end{figure}
+    % \begin{figure}[h!]
+    %     \centering
+    %     \includegraphics[scale=0.8]{"./images/model_accuracy.jpg"}
+    %     \caption{Model accuracy of Feed-Forward Neural Network}
+    % \end{figure}
 
     Using hypothesis testing, we conclude that XGBoost model is significantly better than the other models based on a Student's t-test at significance level $\alpha=5\%$ and number of parameters to be trained.
 
@@ -175,18 +176,29 @@
   
       The sequential model was trained on the time-series data using a transformer encoder. 
       The model was trained using reconstruction loss, and the encoder was used to compute an embedding of the time-series data.
+      The loss curve for the transformer model is shown in Figure \ref{fig:transformer_loss}.
 
       \begin{figure}
           \centering
           \includegraphics[scale=0.25]{"./images/transformer_loss.jpeg"}
           \caption{Transformer reconstruction loss over time.}
+          \label{fig:transformer_loss}
       \end{figure}
 
       After 10 epochs of training, each patient with time-series data had an embedding computed, which was then used as an additional feature in the cross-sectional XGBoost model.
       The XGBoost model with the same maximum depth ($depth=15$), when trained on the concatenated dataset, achieved a lower validation accuracy than the model trained on the cross-sectional data alone, however the model achieved 100\% accuracy on the training data, suggesting overfitting.
       As such, the XGBoost model was retrained on the concatenated dataset with a lower maxmimum depth ($depth=10$).
+      The 10-fold cross-validation results for the retrained model are shown in Figure \ref{fig:transformer_accuracy}.
+
+      \begin{figure}
+          \centering
+          \includegraphics[width=0.5\linewidth]{"./images/model_bars.png"}
+          \caption{Model accuracy of XGBoost model with transformer embedding}
+          \label{fig:transformer_accuracy}
+      \end{figure}
 
 \section{Discussion and Conclusion}
+
 
 \pagebreak
 \nocite{*}
